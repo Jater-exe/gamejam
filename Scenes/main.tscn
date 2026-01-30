@@ -1,9 +1,37 @@
 [gd_scene format=3 uid="uid://cgspdebfb1hw6"]
 
-[ext_resource type="Texture2D" uid="uid://wepuwax4ut8r" path="res://Textures/mask0.png" id="1_jjgbg"]
+[ext_resource type="Texture2D" uid="uid://dinl18sbjiwer" path="res://Textures/mask2.png" id="1_jjgbg"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jjgbg"]
 bg_color = Color(0.6, 0.10980392, 0.15294118, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jjvhh"]
+bg_color = Color(0.27058825, 0.023529412, 0.05490196, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bo1nx"]
+bg_color = Color(0.26970893, 0.024239158, 0.0555579, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kry3j"]
+bg_color = Color(0.27058825, 0.023529412, 0.05490196, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8gbba"]
+bg_color = Color(0.27058825, 0.023529412, 0.05490196, 1)
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
@@ -19,9 +47,12 @@ offset_right = 1920.0
 offset_bottom = 1080.0
 
 [node name="TextureRect" type="TextureRect" parent="Container" unique_id=1072840325]
-layout_mode = 0
-offset_right = 382.0
-offset_bottom = 213.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("1_jjgbg")
 
 [node name="Button_Start" type="Button" parent="Container" unique_id=1717296109]
@@ -39,6 +70,8 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_jjgbg")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jjvhh")
+theme_override_styles/hover = SubResource("StyleBoxFlat_bo1nx")
 text = "Start"
 
 [node name="Button_Exit" type="Button" parent="Container" unique_id=1179125928]
@@ -56,4 +89,6 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_jjgbg")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_kry3j")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8gbba")
 text = "Exit"
