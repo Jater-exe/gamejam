@@ -1,11 +1,12 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1769802820
+::res://::1769804921
 icon.svg::CompressedTexture2D::3815449111528739071::1769798215::1769798251::1::::<><><>0<>0<>b116697479c405a3b06368c0f8a1287a<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
-::res://Scenes/::1769803298
-main.tscn::PackedScene::5232049552928433255::1769803298::0::1::::<><><>0<>0<><>::uid://dinl18sbjiwer::::res://Textures/mask2.png
-::res://Scripts/::1769802820
+::res://Scenes/::1769804513
+main.tscn::PackedScene::5232049552928433255::1769804513::0::1::::<><><>0<>0<><>::uid://dinl18sbjiwer::::res://Textures/mask2.png<>res://Scripts/up_down_animation.gd<>uid://bqvtwhmsv1pce::::res://Scripts/buttons.gd
+::res://Scripts/::1769804435
+buttons.gd::GDScript::3553987412113389028::1769802820::0::1::::<>Button<><>0<>0<><>::
 new_script.gd::GDScript::6460792268061359899::1769800868::0::1::::<>Node<><>0<>0<><>::
-up_down_animation.gd::GDScript::-1::1769802820::0::1::::<>Button<><>0<>0<><>::
+up_down_animation.gd::GDScript::2563340723803325126::1769804435::0::1::::<>Button<><>0<>0<><>::
 ::res://Textures/::1769801004
 ff.gd::GDScript::6279147654837497445::1769800868::0::1::::<>Node<><>0<>0<><>::
 mask0.png::CompressedTexture2D::1553359698420827279::1769801004::1769801004::1::::<><><>0<>0<>b8a61297921c4b902604c9bbaaac6d06<>res://.godot/imported/mask0.png-67e80d40511a1e8995fa720072ad1217.ctex::
