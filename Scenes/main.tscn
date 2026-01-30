@@ -1,3 +1,10 @@
 [gd_scene format=3 uid="uid://cgspdebfb1hw6"]
 
-[node name="Ods" type="Node2D"]
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Container" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
