@@ -1,7 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://cgspdebfb1hw6"]
+[gd_scene format=3 uid="uid://cgspdebfb1hw6"]
 
 [ext_resource type="Texture2D" uid="uid://dinl18sbjiwer" path="res://Textures/mask2.png" id="1_jjgbg"]
-[ext_resource type="Script" uid="uid://bqvtwhmsv1pce" path="res://Scripts/up_down_animation.gd" id="2_bo1nx"]
+[ext_resource type="Script" uid="uid://bqvtwhmsv1pce" path="res://Scripts/buttons.gd" id="2_bo1nx"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jjgbg"]
 bg_color = Color(0.6, 0.10980392, 0.15294118, 1)
@@ -38,16 +38,16 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[node name="Main" type="Control"]
+[node name="Main" type="Control" unique_id=117082661]
 layout_mode = 3
 anchors_preset = 0
 
-[node name="Container" type="Control" parent="."]
+[node name="Container" type="Control" parent="." unique_id=657263555]
 anchors_preset = 0
 offset_right = 1920.0
 offset_bottom = 1080.0
 
-[node name="TextureRect" type="TextureRect" parent="Container"]
+[node name="TextureRect" type="TextureRect" parent="Container" unique_id=16617274]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -56,47 +56,41 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_jjgbg")
 
-[node name="Button_Start" type="Button" parent="Container"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Container" unique_id=334483424]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -120.0
-offset_top = -40.0
-offset_right = 120.0
-offset_bottom = 40.0
+offset_left = -150.0
+offset_top = 160.0
+offset_right = 150.0
+offset_bottom = 330.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 30
+
+[node name="Button_Start" type="Button" parent="Container/VBoxContainer" unique_id=1801409035]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
 theme_override_styles/normal = SubResource("StyleBoxFlat_jjgbg")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_jjvhh")
 theme_override_styles/hover = SubResource("StyleBoxFlat_bo1nx")
 text = "Start"
 script = ExtResource("2_bo1nx")
 
-[node name="Button_Exit" type="Button" parent="Container"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -120.0
-offset_top = 333.0
-offset_right = 120.0
-offset_bottom = 413.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 30
+[node name="Button_Exit" type="Button" parent="Container/VBoxContainer" unique_id=1861726564]
+layout_mode = 2
+size_flags_vertical = 8
+size_flags_stretch_ratio = 0.0
+theme_override_font_sizes/font_size = 60
 theme_override_styles/normal = SubResource("StyleBoxFlat_jjgbg")
 theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_kry3j")
 theme_override_styles/hover = SubResource("StyleBoxFlat_8gbba")
 text = "Exit"
 script = ExtResource("2_bo1nx")
 
-[connection signal="button_down" from="Container/Button_Start" to="Container/Button_Start" method="_on_texture_button_down"]
-[connection signal="button_up" from="Container/Button_Start" to="Container/Button_Start" method="_on_texture_button_up"]
-[connection signal="button_down" from="Container/Button_Exit" to="Container/Button_Start" method="_on_texture_button_down"]
-[connection signal="button_up" from="Container/Button_Exit" to="Container/Button_Start" method="_on_texture_button_up"]
+[connection signal="button_down" from="Container/VBoxContainer/Button_Start" to="Container/VBoxContainer/Button_Start" method="_on_texture_button_down"]
+[connection signal="button_up" from="Container/VBoxContainer/Button_Start" to="Container/VBoxContainer/Button_Start" method="_on_texture_button_up"]
+[connection signal="button_down" from="Container/VBoxContainer/Button_Exit" to="Container/VBoxContainer/Button_Start" method="_on_texture_button_down"]
+[connection signal="button_up" from="Container/VBoxContainer/Button_Exit" to="Container/VBoxContainer/Button_Start" method="_on_texture_button_up"]
