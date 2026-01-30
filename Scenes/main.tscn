@@ -24,7 +24,7 @@ offset_right = 382.0
 offset_bottom = 213.0
 texture = ExtResource("1_jjgbg")
 
-[node name="Button" type="Button" parent="Container" unique_id=1717296109]
+[node name="Button_Start" type="Button" parent="Container" unique_id=1717296109]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -41,7 +41,7 @@ theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_jjgbg")
 text = "Start"
 
-[node name="Button2" type="Button" parent="Container" unique_id=1179125928]
+[node name="Button_Exit" type="Button" parent="Container" unique_id=1179125928]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
