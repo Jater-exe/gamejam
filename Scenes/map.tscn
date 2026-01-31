@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://6o245eb073fr"]
 
+<<<<<<< Updated upstream
 [ext_resource type="Script" path="res://Scripts/map.gd" id="1_26yhd"]
 [ext_resource type="Script" uid="uid://bqvtwhmsv1pce" path="res://Scripts/buttons.gd" id="1_ci6au"]
 [ext_resource type="Texture2D" uid="uid://cc0pc8wu35xq1" path="res://Assets/Textures/map_texture.png" id="2_p3ir5"]
@@ -24,6 +25,12 @@ corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
+=======
+[ext_resource type="Script" uid="uid://73ov2grfafg4" path="res://Scripts/map.gd" id="1_26yhd"]
+[ext_resource type="Texture2D" uid="uid://cc0pc8wu35xq1" path="res://Assets/Textures/map_texture.png" id="2_p3ir5"]
+[ext_resource type="Script" uid="uid://bkq7k2sxhvokh" path="res://Scripts/button_return.gd" id="3_myvm1"]
+[ext_resource type="Texture2D" uid="uid://chmypxkfgq7ms" path="res://Assets/Textures/button2.png" id="4_q0mm3"]
+>>>>>>> Stashed changes
 
 [node name="Map" type="Node" unique_id=1646688916]
 script = ExtResource("1_26yhd")
@@ -48,6 +55,7 @@ grow_vertical = 2
 texture = ExtResource("2_p3ir5")
 metadata/_edit_group_ = true
 
+<<<<<<< Updated upstream
 [node name="Button_Return" type="Button" parent="Control" unique_id=158264621]
 custom_minimum_size = Vector2(140, 60)
 layout_mode = 1
@@ -136,3 +144,27 @@ text = "MUNDETA"
 [connection signal="button_up" from="Control/Button_Return" to="Control/Button_Return" method="_on_texture_button_up"]
 [connection signal="pressed" from="Control/Button_Return" to="." method="_on_button_return_pressed"]
 [connection signal="pressed" from="Control/Button_Return" to="Control/Button_Return" method="_on_pressed"]
+=======
+[node name="Button_Return" type="MarginContainer" parent="." unique_id=53355034]
+offset_left = 1579.0
+offset_top = 36.0
+offset_right = 1879.0
+offset_bottom = 147.0
+script = ExtResource("3_myvm1")
+
+[node name="TextureButton_Return" type="TextureButton" parent="Button_Return" unique_id=1816467871]
+custom_minimum_size = Vector2(140, 100)
+layout_mode = 2
+texture_normal = ExtResource("4_q0mm3")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Button_Return" unique_id=901109367]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Return"
+horizontal_alignment = 1
+
+[connection signal="button_down" from="Button_Return/TextureButton_Return" to="Button_Return" method="_on_texture_button_return_button_down"]
+[connection signal="button_up" from="Button_Return/TextureButton_Return" to="Button_Return" method="_on_texture_button_return_button_up"]
+[connection signal="pressed" from="Button_Return/TextureButton_Return" to="." method="_on_texture_button_return_pressed"]
+>>>>>>> Stashed changes

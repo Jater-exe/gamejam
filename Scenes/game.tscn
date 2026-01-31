@@ -1,38 +1,15 @@
 [gd_scene format=3 uid="uid://dfn2vw2lesmwg"]
 
-[ext_resource type="Script" uid="uid://bqvtwhmsv1pce" path="res://Scripts/buttons.gd" id="1_ebmjs"]
 [ext_resource type="Script" uid="uid://dq1efcsdpdl2i" path="res://Scripts/game.gd" id="1_qxrlw"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qxrlw"]
-bg_color = Color(0.6, 0.10980392, 0.15294118, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wrm1d"]
-bg_color = Color(0.27058825, 0.023529412, 0.05490196, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3dryh"]
-bg_color = Color(0.27058825, 0.023529412, 0.05490196, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ebmjs"]
-load_path = "res://.godot/imported/book2.png-1de4932ae554fab41603b6922e05f7b0.ctex"
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wrm1d"]
-texture = SubResource("CompressedTexture2D_ebmjs")
+[ext_resource type="Script" uid="uid://brebecqwnnso0" path="res://Scripts/button_menu.gd" id="2_3dryh"]
+[ext_resource type="Script" uid="uid://6j3cgft5annx" path="res://Scripts/button_book.gd" id="4_i6g32"]
+[ext_resource type="Texture2D" uid="uid://chmypxkfgq7ms" path="res://Assets/Textures/button2.png" id="4_wowpa"]
+[ext_resource type="Script" uid="uid://dut5i2honjo1v" path="res://Scripts/button_map.gd" id="5_wowpa"]
 
 [node name="game" type="Node" unique_id=105694039]
 script = ExtResource("1_qxrlw")
 
+<<<<<<< Updated upstream
 [node name="Button_Menu" type="Button" parent="." unique_id=493925094]
 custom_minimum_size = Vector2(140, 60)
 anchors_preset = 1
@@ -49,9 +26,28 @@ theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxFlat_qxrlw")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_wrm1d")
 theme_override_styles/hover = SubResource("StyleBoxFlat_3dryh")
-text = "Menu"
-script = ExtResource("1_ebmjs")
+=======
+[node name="Button_Menu" type="MarginContainer" parent="." unique_id=1969119511]
+offset_left = 1619.0
+offset_top = 36.0
+offset_right = 1839.0
+offset_bottom = 147.0
+script = ExtResource("2_3dryh")
 
+[node name="TextureButton_Menu" type="TextureButton" parent="Button_Menu" unique_id=1501791242]
+custom_minimum_size = Vector2(140, 100)
+layout_mode = 2
+texture_normal = ExtResource("4_wowpa")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Button_Menu" unique_id=1020417174]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+>>>>>>> Stashed changes
+text = "Menu"
+horizontal_alignment = 1
+
+<<<<<<< Updated upstream
 [node name="Button_Map" type="Button" parent="." unique_id=1419808491]
 custom_minimum_size = Vector2(140, 60)
 anchors_preset = 2
@@ -87,18 +83,54 @@ theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxTexture_wrm1d")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_wrm1d")
 theme_override_styles/hover = SubResource("StyleBoxFlat_3dryh")
-text = "Book"
-script = ExtResource("1_ebmjs")
+=======
+[node name="Button_Book" type="MarginContainer" parent="." unique_id=1417299664]
+offset_left = 257.0
+offset_top = 929.0
+offset_right = 431.0
+offset_bottom = 1040.0
+script = ExtResource("4_i6g32")
 
-[connection signal="button_down" from="Button_Menu" to="Button_Menu" method="_on_texture_button_down"]
-[connection signal="button_up" from="Button_Menu" to="Button_Menu" method="_on_texture_button_up"]
-[connection signal="pressed" from="Button_Menu" to="." method="_on_button_menu_pressed"]
-[connection signal="pressed" from="Button_Menu" to="Button_Menu" method="_on_pressed"]
-[connection signal="button_down" from="Button_Map" to="Button_Map" method="_on_texture_button_down"]
-[connection signal="button_up" from="Button_Map" to="Button_Map" method="_on_texture_button_up"]
-[connection signal="pressed" from="Button_Map" to="." method="_on_button_map_pressed"]
-[connection signal="pressed" from="Button_Map" to="Button_Map" method="_on_pressed"]
-[connection signal="button_down" from="Button_Book" to="Button_Book" method="_on_texture_button_down"]
-[connection signal="button_up" from="Button_Book" to="Button_Book" method="_on_texture_button_up"]
-[connection signal="pressed" from="Button_Book" to="." method="_on_button_book_pressed"]
-[connection signal="pressed" from="Button_Book" to="Button_Book" method="_on_pressed"]
+[node name="TextureButton_Book" type="TextureButton" parent="Button_Book" unique_id=892263265]
+custom_minimum_size = Vector2(140, 100)
+layout_mode = 2
+texture_normal = ExtResource("4_wowpa")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Button_Book" unique_id=1498181183]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+>>>>>>> Stashed changes
+text = "Book"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Button_Map" type="MarginContainer" parent="." unique_id=2137947835]
+offset_left = 62.0
+offset_top = 927.0
+offset_right = 236.0
+offset_bottom = 1038.0
+script = ExtResource("5_wowpa")
+
+[node name="TextureButton_Map" type="TextureButton" parent="Button_Map" unique_id=1123907491]
+custom_minimum_size = Vector2(140, 100)
+layout_mode = 2
+texture_normal = ExtResource("4_wowpa")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Button_Map" unique_id=2145205294]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Map"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="button_down" from="Button_Menu/TextureButton_Menu" to="Button_Menu" method="_on_texture_button_menu_button_down"]
+[connection signal="button_up" from="Button_Menu/TextureButton_Menu" to="Button_Menu" method="_on_texture_button_menu_button_up"]
+[connection signal="pressed" from="Button_Menu/TextureButton_Menu" to="." method="_on_texture_button_menu_pressed"]
+[connection signal="button_down" from="Button_Book/TextureButton_Book" to="Button_Book" method="_on_texture_button_book_button_down"]
+[connection signal="button_up" from="Button_Book/TextureButton_Book" to="Button_Book" method="_on_texture_button_book_button_up"]
+[connection signal="pressed" from="Button_Book/TextureButton_Book" to="." method="_on_texture_button_book_pressed"]
+[connection signal="button_down" from="Button_Map/TextureButton_Map" to="Button_Map" method="_on_texture_button_map_button_down"]
+[connection signal="button_up" from="Button_Map/TextureButton_Map" to="Button_Map" method="_on_texture_button_map_button_up"]
+[connection signal="pressed" from="Button_Map/TextureButton_Map" to="." method="_on_texture_button_map_pressed"]
