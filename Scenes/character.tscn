@@ -1,3 +1,28 @@
 [gd_scene format=3 uid="uid://c4eajokfudg8a"]
 
+[ext_resource type="Script" path="res://Scripts/button_return.gd" id="1_ushfy"]
+[ext_resource type="Texture2D" uid="uid://bbv4bhcat5ibi" path="res://Assets/Textures/button.png" id="2_owm7s"]
+
 [node name="character" type="Sprite2D" unique_id=424038424]
+
+[node name="Button_Return" type="MarginContainer" parent="." unique_id=908294405]
+offset_left = 1619.0
+offset_top = 36.0
+offset_right = 1839.0
+offset_bottom = 147.0
+script = ExtResource("1_ushfy")
+
+[node name="TextureButton_Return" type="TextureButton" parent="Button_Return" unique_id=744567298]
+custom_minimum_size = Vector2(140, 100)
+layout_mode = 2
+texture_normal = ExtResource("2_owm7s")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Button_Return" unique_id=1171020481]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Return"
+horizontal_alignment = 1
+
+[connection signal="button_down" from="Button_Return/TextureButton_Return" to="Button_Return" method="_on_texture_button_return_button_down"]
+[connection signal="button_up" from="Button_Return/TextureButton_Return" to="Button_Return" method="_on_texture_button_return_button_up"]
