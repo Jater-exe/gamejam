@@ -1,8 +1,13 @@
 [gd_scene format=3 uid="uid://ceiwh526i44vk"]
 
+[ext_resource type="Script" uid="uid://ca7xv5m8ewg7t" path="res://Scripts/mask.gd" id="1_nr6xi"]
+
 [node name="Mask" type="TextureRect" unique_id=1769545113]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_nr6xi")
+
+[connection signal="ready" from="." to="." method="_ready"]
