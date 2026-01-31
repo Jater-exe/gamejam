@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://b3gvej0bmdm1s"
-path="res://.godot/imported/bitByBit_ [font].ttf-0de395fecde5537403533787319d0bbc.fontdata"
+uid="uid://ccoy6mkvnf8br"
+path="res://.godot/imported/PixelatedEleganceRegular-ovyAA.ttf-67d86f3f6d461cc9a9d98600f907a661.fontdata"
 
 [deps]
 
-source_file="res://Assets/Fonts/bitByBit_ [font]/bitByBit_ [font]/bitByBit_ [font].ttf"
-dest_files=["res://.godot/imported/bitByBit_ [font].ttf-0de395fecde5537403533787319d0bbc.fontdata"]
+source_file="res://Assets/Fonts/pixelated-elegance-font/PixelatedEleganceRegular-ovyAA.ttf"
+dest_files=["res://.godot/imported/PixelatedEleganceRegular-ovyAA.ttf-67d86f3f6d461cc9a9d98600f907a661.fontdata"]
 
 [params]
 

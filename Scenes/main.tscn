@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cgspdebfb1hw6"]
 
-[ext_resource type="Texture2D" uid="uid://dinl18sbjiwer" path="res://Textures/mask2.png" id="1_jjgbg"]
+[ext_resource type="Texture2D" uid="uid://dinl18sbjiwer" path="res://Assets/Textures/mask2.png" id="1_jjgbg"]
 [ext_resource type="Script" uid="uid://bcrx32m3i5hus" path="res://Scripts/up_down_animation.gd" id="2_bo1nx"]
 [ext_resource type="Script" uid="uid://bp4c0br0nj4t7" path="res://Scenes/menu_buttons.gd" id="2_jjvhh"]
 [ext_resource type="Script" uid="uid://bqvtwhmsv1pce" path="res://Scripts/buttons.gd" id="3_8gbba"]
@@ -67,13 +67,15 @@ anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -150.0
 offset_top = 160.0
-offset_right = 150.0
+offset_right = 170.0
 offset_bottom = 330.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/separation = 32
 script = ExtResource("2_jjvhh")
 
 [node name="Button_Start" type="Button" parent="Container/VBoxContainer" unique_id=1801409035]
+custom_minimum_size = Vector2(500, 100)
 layout_mode = 2
 theme_override_font_sizes/font_size = 60
 theme_override_styles/normal = SubResource("StyleBoxFlat_jjgbg")
@@ -83,6 +85,7 @@ text = "Start"
 script = ExtResource("2_bo1nx")
 
 [node name="Button_Exit" type="Button" parent="Container/VBoxContainer" unique_id=1861726564]
+custom_minimum_size = Vector2(0, 100)
 layout_mode = 2
 size_flags_vertical = 8
 size_flags_stretch_ratio = 0.0

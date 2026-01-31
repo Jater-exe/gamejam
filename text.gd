@@ -15,4 +15,4 @@ func _on_timer_timeout() -> void:
 		$".".text = "Adeu"
 	else: 
 		$Timer.stop()
-		get_tree().change_scene_to_file("res://Scenes/main.tscn")
+		get_tree().change_scene_to_file("res://Scenes/game.tscn")
