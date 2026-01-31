@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://4yexv8wxdq6o" path="res://Scripts/control.gd" id="1_h44gi"]
 [ext_resource type="AudioStream" uid="uid://cujfrmsa6rial" path="res://Assets/audio/typing-keyboard-asmr-356116.mp3" id="2_47wfv"]
-[ext_resource type="Texture2D" uid="uid://mt876360aaai" path="res://Assets/Pixel Art Police Officer PNG.jpg" id="3_cegie"]
+[ext_resource type="Texture2D" uid="uid://bg1h46gokl1bg" path="res://Assets/Textures/officer.png" id="3_cegie"]
 
 [node name="Setting" type="Node" unique_id=2137079640]
 

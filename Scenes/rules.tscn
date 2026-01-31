@@ -47,7 +47,7 @@ offset_bottom = 1079.0
 theme_override_font_sizes/normal_font_size = 32
 text = "DO NOT LET PEOPLE FROM NEW VILANOVA IN, POLICE IS TRYING TO ISOLATE A MURDERER.
 
-PEOPLE DRESSED UP SHOULD HAVE NO PROBLEM PASSING THE CUSTOM"
+PEOPLE DRESSED UP SHOULD HAVE NO PROBLEM AT THE CONTROL."
 
 [connection signal="button_down" from="Button_Return/TextureButton_Return" to="Button_Return" method="_on_texture_button_return_button_down"]
 [connection signal="button_up" from="Button_Return/TextureButton_Return" to="Button_Return" method="_on_texture_button_return_button_up"]
