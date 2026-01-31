@@ -11,7 +11,6 @@
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_21xkr")
-metadata/environment = true
 
 [node name="Container" type="Control" parent="." unique_id=657263555]
 anchors_preset = 0
@@ -77,10 +76,10 @@ horizontal_alignment = 1
 
 [node name="Label" type="Label" parent="." unique_id=1962927631]
 layout_mode = 0
-offset_left = 55.0
-offset_top = 170.0
-offset_right = 484.0
-offset_bottom = 455.0
+offset_left = 107.0
+offset_top = 416.0
+offset_right = 536.0
+offset_bottom = 701.0
 theme_override_font_sizes/font_size = 78
 text = "COME IN"
 

@@ -17,6 +17,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 config/name="gamejam"
 run/main_scene="uid://cgspdebfb1hw6"
 config/features=PackedStringArray("4.6", "Forward Plus")
+boot_splash/bg_color=Color(0.0035191663, 0.003519169, 0.0035191642, 1)
 config/icon="res://icon.svg"
 
 [display]
@@ -56,3 +57,4 @@ esc={
 textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0.01702068, 0.017020682, 0.01702067, 1)
