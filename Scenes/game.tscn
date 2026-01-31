@@ -1,14 +1,22 @@
 [gd_scene format=3 uid="uid://dfn2vw2lesmwg"]
 
 [ext_resource type="Script" uid="uid://dq1efcsdpdl2i" path="res://Scripts/game.gd" id="1_qxrlw"]
+<<<<<<< Updated upstream
 [ext_resource type="Script" uid="uid://brebecqwnnso0" path="res://Scripts/button_menu.gd" id="2_3dryh"]
 [ext_resource type="Script" uid="uid://6j3cgft5annx" path="res://Scripts/button_book.gd" id="4_i6g32"]
 [ext_resource type="Texture2D" uid="uid://chmypxkfgq7ms" path="res://Assets/Textures/button2.png" id="4_wowpa"]
 [ext_resource type="Script" uid="uid://dut5i2honjo1v" path="res://Scripts/button_map.gd" id="5_wowpa"]
+=======
+[ext_resource type="Script" path="res://Scripts/button_menu.gd" id="2_3dryh"]
+[ext_resource type="Texture2D" uid="uid://b5x3jddawoilk" path="res://Assets/Textures/button.png" id="3_wowpa"]
+[ext_resource type="Script" path="res://Scripts/button_book.gd" id="4_i6g32"]
+[ext_resource type="Script" path="res://Scripts/button_map.gd" id="5_wowpa"]
+>>>>>>> Stashed changes
 
 [node name="game" type="Node" unique_id=105694039]
 script = ExtResource("1_qxrlw")
 
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 [node name="Button_Menu" type="Button" parent="." unique_id=493925094]
 custom_minimum_size = Vector2(140, 60)
@@ -27,12 +35,15 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_qxrlw")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_wrm1d")
 theme_override_styles/hover = SubResource("StyleBoxFlat_3dryh")
 =======
+=======
+>>>>>>> Stashed changes
 [node name="Button_Menu" type="MarginContainer" parent="." unique_id=1969119511]
 offset_left = 1619.0
 offset_top = 36.0
 offset_right = 1839.0
 offset_bottom = 147.0
 script = ExtResource("2_3dryh")
+<<<<<<< Updated upstream
 
 [node name="TextureButton_Menu" type="TextureButton" parent="Button_Menu" unique_id=1501791242]
 custom_minimum_size = Vector2(140, 100)
@@ -105,6 +116,41 @@ text = "Book"
 horizontal_alignment = 1
 vertical_alignment = 2
 
+=======
+
+[node name="TextureButton_Menu" type="TextureButton" parent="Button_Menu" unique_id=1501791242]
+custom_minimum_size = Vector2(140, 100)
+layout_mode = 2
+texture_normal = ExtResource("3_wowpa")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Button_Menu" unique_id=1020417174]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Menu"
+horizontal_alignment = 1
+
+[node name="Button_Book" type="MarginContainer" parent="." unique_id=1417299664]
+offset_left = 257.0
+offset_top = 929.0
+offset_right = 431.0
+offset_bottom = 1040.0
+script = ExtResource("4_i6g32")
+
+[node name="TextureButton_Book" type="TextureButton" parent="Button_Book" unique_id=892263265]
+custom_minimum_size = Vector2(140, 100)
+layout_mode = 2
+texture_normal = ExtResource("3_wowpa")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Button_Book" unique_id=1498181183]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "Book"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+>>>>>>> Stashed changes
 [node name="Button_Map" type="MarginContainer" parent="." unique_id=2137947835]
 offset_left = 62.0
 offset_top = 927.0
@@ -115,7 +161,11 @@ script = ExtResource("5_wowpa")
 [node name="TextureButton_Map" type="TextureButton" parent="Button_Map" unique_id=1123907491]
 custom_minimum_size = Vector2(140, 100)
 layout_mode = 2
+<<<<<<< Updated upstream
 texture_normal = ExtResource("4_wowpa")
+=======
+texture_normal = ExtResource("3_wowpa")
+>>>>>>> Stashed changes
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="Button_Map" unique_id=2145205294]
