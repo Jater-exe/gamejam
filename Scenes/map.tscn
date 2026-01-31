@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://73ov2grfafg4" path="res://Scripts/map.gd" id="1_26yhd"]
 [ext_resource type="Texture2D" uid="uid://cc0pc8wu35xq1" path="res://Assets/Textures/map_texture.png" id="2_p3ir5"]
 [ext_resource type="Script" path="res://Scripts/button_return.gd" id="3_myvm1"]
-[ext_resource type="Texture2D" uid="uid://bbv4bhcat5ibi" path="res://Assets/Textures/button.png" id="4_myvm1"]
+[ext_resource type="Texture2D" uid="uid://dcpe1pqc4sa1t" path="res://Assets/Textures/button.png" id="4_myvm1"]
 
 [node name="Map" type="Node" unique_id=1646688916]
 script = ExtResource("1_26yhd")
@@ -46,6 +46,55 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 40
 text = "Return"
 horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="." unique_id=1828717271]
+offset_left = 160.0
+offset_top = 284.0
+offset_right = 441.0
+offset_bottom = 448.0
+text = "NEW VILANOVA"
+
+[node name="Label2" type="Label" parent="." unique_id=2036814055]
+offset_left = 817.0
+offset_top = 287.0
+offset_right = 1227.0
+offset_bottom = 454.0
+text = "TORROGONA"
+
+[node name="Label3" type="Label" parent="." unique_id=1035575760]
+offset_left = 1243.0
+offset_top = 348.0
+offset_right = 1661.0
+offset_bottom = 603.0
+text = "PERSIONA"
+
+[node name="Label4" type="Label" parent="." unique_id=1178152335]
+offset_left = 826.0
+offset_top = 801.0
+offset_right = 1078.0
+offset_bottom = 885.0
+text = "REINONA"
+
+[node name="Label6" type="Label" parent="." unique_id=1065445968]
+offset_left = 417.0
+offset_top = 157.0
+offset_right = 567.0
+offset_bottom = 291.0
+text = "NUGGET TOWN"
+
+[node name="Label5" type="Label" parent="." unique_id=2046920823]
+offset_left = 624.0
+offset_top = 605.0
+offset_right = 886.0
+offset_bottom = 717.0
+text = "BARSALUNA"
+
+[node name="Label7" type="Label" parent="." unique_id=1164183203]
+offset_left = 530.0
+offset_top = 395.0
+offset_right = 683.0
+offset_bottom = 485.0
+text = "TINGRIS"
 
 [connection signal="button_down" from="Button_Return/TextureButton_Return" to="Button_Return" method="_on_texture_button_return_button_down"]
 [connection signal="button_up" from="Button_Return/TextureButton_Return" to="Button_Return" method="_on_texture_button_return_button_up"]
