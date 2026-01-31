@@ -43,9 +43,15 @@ corner_radius_bottom_left = 10
 =======
 [ext_resource type="Script" uid="uid://bp4c0br0nj4t7" path="res://Scripts/menu_buttons.gd" id="2_jjvhh"]
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 [ext_resource type="Script" uid="uid://7wxfaa52wh5t" path="res://Scripts/margin_container.gd" id="3_6bp64"]
 [ext_resource type="Texture2D" uid="uid://chmypxkfgq7ms" path="res://Assets/Textures/button2.png" id="3_kry3j"]
 [ext_resource type="Script" uid="uid://bbddop8r8vh10" path="res://Scripts/margin_container_2.gd" id="5_kry3j"]
+>>>>>>> Stashed changes
+=======
+[ext_resource type="Script" path="res://Scripts/margin_container.gd" id="3_6bp64"]
+[ext_resource type="Texture2D" uid="uid://b5x3jddawoilk" path="res://Assets/Textures/button.png" id="3_kry3j"]
+[ext_resource type="Script" path="res://Scripts/margin_container_2.gd" id="5_kry3j"]
 >>>>>>> Stashed changes
 =======
 [ext_resource type="Script" path="res://Scripts/margin_container.gd" id="3_6bp64"]
