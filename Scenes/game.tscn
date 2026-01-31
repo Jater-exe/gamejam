@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://d0y4kjy4h30sq" path="res://Assets/Textures/minimapa.png" id="8_rku1e"]
 [ext_resource type="Texture2D" uid="uid://b2anit7jl35f" path="res://Assets/Textures/sprite_0.png" id="9_ldgsr"]
 [ext_resource type="Texture2D" uid="uid://bkprs6fv5e7lp" path="res://Assets/Textures/sprite_1.png" id="10_o5yvi"]
+[ext_resource type="Texture2D" uid="uid://c0uvhi18csv7g" path="res://Assets/Textures/bell.png" id="11_o5yvi"]
 [ext_resource type="Texture2D" uid="uid://d1db5ejm22qfc" path="res://Assets/Textures/sprite_2.png" id="11_rku1e"]
 [ext_resource type="Texture2D" uid="uid://ble20c75c31c7" path="res://Assets/Textures/sprite_3.png" id="12_rfjv2"]
 
@@ -26,6 +27,78 @@ unicode = 100
 
 [sub_resource type="Shortcut" id="Shortcut_1phco"]
 events = [SubResource("InputEventKey_rfjv2")]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rku1e"]
+atlas = ExtResource("11_o5yvi")
+region = Rect2(0, 20, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rfjv2"]
+atlas = ExtResource("11_o5yvi")
+region = Rect2(20, 20, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1phco"]
+atlas = ExtResource("11_o5yvi")
+region = Rect2(40, 20, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nb51f"]
+atlas = ExtResource("11_o5yvi")
+region = Rect2(0, 40, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_85qyi"]
+atlas = ExtResource("11_o5yvi")
+region = Rect2(40, 0, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ewbju"]
+atlas = ExtResource("11_o5yvi")
+region = Rect2(20, 0, 20, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nnt18"]
+atlas = ExtResource("11_o5yvi")
+region = Rect2(0, 0, 20, 20)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_iivbl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rku1e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rfjv2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1phco")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nb51f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1phco")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rfjv2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rku1e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_85qyi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ewbju")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nnt18")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ewbju")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_85qyi")
+}],
+"loop": true,
+"name": &"default",
+"speed": 50.0
+}]
 
 [node name="game" type="Node" unique_id=105694039]
 script = ExtResource("1_qxrlw")
@@ -115,6 +188,27 @@ texture_normal = ExtResource("11_rku1e")
 texture_pressed = ExtResource("12_rfjv2")
 stretch_mode = 0
 
+[node name="Button_Bell" type="MarginContainer" parent="." unique_id=1964184247]
+offset_left = 433.0
+offset_top = 89.0
+offset_right = 613.0
+offset_bottom = 269.0
+script = ExtResource("1_ebmjs")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Button_Bell" unique_id=1169091551]
+position = Vector2(97, 87)
+scale = Vector2(8, 8)
+sprite_frames = SubResource("SpriteFrames_iivbl")
+
+[node name="Timer" type="Timer" parent="Button_Bell/AnimatedSprite2D" unique_id=1600774960]
+
+[node name="TextureButton_Bell" type="TextureButton" parent="Button_Bell" unique_id=990892815]
+custom_minimum_size = Vector2(140, 100)
+layout_mode = 2
+keep_pressed_outside = true
+shortcut = SubResource("Shortcut_1phco")
+stretch_mode = 0
+
 [connection signal="button_down" from="Button_Menu/TextureButton_Menu" to="Button_Menu" method="_on_texture_button_down"]
 [connection signal="button_up" from="Button_Menu/TextureButton_Menu" to="Button_Menu" method="_on_texture_button_up"]
 [connection signal="pressed" from="Button_Menu/TextureButton_Menu" to="." method="_on_texture_button_menu_pressed"]
@@ -130,3 +224,8 @@ stretch_mode = 0
 [connection signal="button_down" from="Button_Deny/TextureButton_Deny" to="Button_Deny" method="_on_texture_button_down"]
 [connection signal="button_up" from="Button_Deny/TextureButton_Deny" to="Button_Deny" method="_on_texture_button_up"]
 [connection signal="pressed" from="Button_Deny/TextureButton_Deny" to="." method="_on_texture_button_deny_pressed"]
+[connection signal="animation_looped" from="Button_Bell/AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_looped"]
+[connection signal="ready" from="Button_Bell/AnimatedSprite2D" to="." method="_on_animated_sprite_2d_ready"]
+[connection signal="button_down" from="Button_Bell/TextureButton_Bell" to="Button_Bell" method="_on_texture_button_down"]
+[connection signal="button_up" from="Button_Bell/TextureButton_Bell" to="Button_Bell" method="_on_texture_button_up"]
+[connection signal="pressed" from="Button_Bell/TextureButton_Bell" to="." method="_on_texture_button_bell_pressed"]
