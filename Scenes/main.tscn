@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dinl18sbjiwer" path="res://Textures/mask2.png" id="1_jjgbg"]
 [ext_resource type="Script" uid="uid://bcrx32m3i5hus" path="res://Scripts/up_down_animation.gd" id="2_bo1nx"]
+[ext_resource type="Script" uid="uid://bp4c0br0nj4t7" path="res://Scenes/menu_buttons.gd" id="2_jjvhh"]
 [ext_resource type="Script" uid="uid://bqvtwhmsv1pce" path="res://Scripts/buttons.gd" id="3_8gbba"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jjgbg"]
@@ -70,6 +71,7 @@ offset_right = 150.0
 offset_bottom = 330.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("2_jjvhh")
 
 [node name="Button_Start" type="Button" parent="Container/VBoxContainer" unique_id=1801409035]
 layout_mode = 2
@@ -95,3 +97,4 @@ script = ExtResource("3_8gbba")
 [connection signal="button_up" from="Container/VBoxContainer/Button_Start" to="Container/VBoxContainer/Button_Start" method="_on_texture_button_up"]
 [connection signal="button_down" from="Container/VBoxContainer/Button_Exit" to="Container/VBoxContainer/Button_Exit" method="_on_texture_button_down"]
 [connection signal="button_up" from="Container/VBoxContainer/Button_Exit" to="Container/VBoxContainer/Button_Exit" method="_on_texture_button_up"]
+[connection signal="pressed" from="Container/VBoxContainer/Button_Exit" to="Container/VBoxContainer" method="_on_button_exit_pressed"]
