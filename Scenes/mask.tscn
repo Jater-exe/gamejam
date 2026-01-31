@@ -3,12 +3,12 @@
 [ext_resource type="Script" uid="uid://ca7xv5m8ewg7t" path="res://Scripts/mask.gd" id="1_nr6xi"]
 
 [node name="Mask" type="TextureRect" unique_id=1769545113]
-custom_minimum_size = Vector2(128, 128)
+custom_minimum_size = Vector2(400, 300)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = -1408.0
-offset_bottom = -568.0
+offset_right = -1792.0
+offset_bottom = -952.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_nr6xi")
