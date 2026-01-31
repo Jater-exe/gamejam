@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://73ov2grfafg4" path="res://Scripts/map.gd" id="1_26yhd"]
 [ext_resource type="Texture2D" uid="uid://cc0pc8wu35xq1" path="res://Assets/Textures/map_texture.png" id="2_p3ir5"]
 [ext_resource type="Script" path="res://Scripts/button_return.gd" id="3_myvm1"]
-[ext_resource type="Texture2D" uid="uid://dcpe1pqc4sa1t" path="res://Assets/Textures/button.png" id="4_myvm1"]
+[ext_resource type="Texture2D" uid="uid://bbv4bhcat5ibi" path="res://Assets/Textures/button.png" id="4_myvm1"]
 
 [node name="Map" type="Node" unique_id=1646688916]
 script = ExtResource("1_26yhd")

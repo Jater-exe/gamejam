@@ -40,41 +40,41 @@ grow_vertical = 2
 theme_override_constants/separation = 32
 script = ExtResource("2_jjvhh")
 
-[node name="MarginContainer" type="MarginContainer" parent="Container/VBoxContainer" unique_id=696324519]
+[node name="Button_Start" type="MarginContainer" parent="Container/VBoxContainer" unique_id=696324519]
 layout_mode = 2
 script = ExtResource("3_6bp64")
 
-[node name="TextureButton_Start" type="TextureButton" parent="Container/VBoxContainer/MarginContainer" unique_id=1517040016]
+[node name="TextureButton_Start" type="TextureButton" parent="Container/VBoxContainer/Button_Start" unique_id=1517040016]
 custom_minimum_size = Vector2(140, 100)
 layout_mode = 2
 texture_normal = ExtResource("3_kry3j")
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="Container/VBoxContainer/MarginContainer" unique_id=1405791098]
+[node name="Label" type="Label" parent="Container/VBoxContainer/Button_Start" unique_id=1405791098]
 layout_mode = 2
 theme_override_font_sizes/font_size = 60
 text = "Start"
 horizontal_alignment = 1
 
-[node name="MarginContainer2" type="MarginContainer" parent="Container/VBoxContainer" unique_id=1816165040]
+[node name="Button_Exit" type="MarginContainer" parent="Container/VBoxContainer" unique_id=1816165040]
 layout_mode = 2
 script = ExtResource("5_kry3j")
 
-[node name="TextureButton_Exit" type="TextureButton" parent="Container/VBoxContainer/MarginContainer2" unique_id=78903822]
+[node name="TextureButton_Exit" type="TextureButton" parent="Container/VBoxContainer/Button_Exit" unique_id=78903822]
 custom_minimum_size = Vector2(140, 100)
 layout_mode = 2
 texture_normal = ExtResource("3_kry3j")
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="Container/VBoxContainer/MarginContainer2" unique_id=1206521494]
+[node name="Label" type="Label" parent="Container/VBoxContainer/Button_Exit" unique_id=1206521494]
 layout_mode = 2
 theme_override_font_sizes/font_size = 60
 text = "Exit"
 horizontal_alignment = 1
 
-[connection signal="button_down" from="Container/VBoxContainer/MarginContainer/TextureButton_Start" to="Container/VBoxContainer/MarginContainer" method="_on_texture_button_start_button_down"]
-[connection signal="button_up" from="Container/VBoxContainer/MarginContainer/TextureButton_Start" to="Container/VBoxContainer/MarginContainer" method="_on_texture_button_start_button_up"]
-[connection signal="pressed" from="Container/VBoxContainer/MarginContainer/TextureButton_Start" to="Container/VBoxContainer" method="_on_texture_button_start_pressed"]
-[connection signal="button_down" from="Container/VBoxContainer/MarginContainer2/TextureButton_Exit" to="Container/VBoxContainer/MarginContainer2" method="_on_texture_button_exit_button_down"]
-[connection signal="button_up" from="Container/VBoxContainer/MarginContainer2/TextureButton_Exit" to="Container/VBoxContainer/MarginContainer2" method="_on_texture_button_exit_button_up"]
-[connection signal="pressed" from="Container/VBoxContainer/MarginContainer2/TextureButton_Exit" to="Container/VBoxContainer" method="_on_texture_button_exit_pressed"]
+[connection signal="button_down" from="Container/VBoxContainer/Button_Start/TextureButton_Start" to="Container/VBoxContainer/Button_Start" method="_on_texture_button_start_button_down"]
+[connection signal="button_up" from="Container/VBoxContainer/Button_Start/TextureButton_Start" to="Container/VBoxContainer/Button_Start" method="_on_texture_button_start_button_up"]
+[connection signal="pressed" from="Container/VBoxContainer/Button_Start/TextureButton_Start" to="Container/VBoxContainer" method="_on_texture_button_start_pressed"]
+[connection signal="button_down" from="Container/VBoxContainer/Button_Exit/TextureButton_Exit" to="Container/VBoxContainer/Button_Exit" method="_on_texture_button_exit_button_down"]
+[connection signal="button_up" from="Container/VBoxContainer/Button_Exit/TextureButton_Exit" to="Container/VBoxContainer/Button_Exit" method="_on_texture_button_exit_button_up"]
+[connection signal="pressed" from="Container/VBoxContainer/Button_Exit/TextureButton_Exit" to="Container/VBoxContainer" method="_on_texture_button_exit_pressed"]
