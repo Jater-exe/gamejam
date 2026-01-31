@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://vpcum6mduvsy" path="res://rules.gd" id="1_o41bs"]
 [ext_resource type="Script" path="res://Scripts/button_return.gd" id="2_uoipu"]
-[ext_resource type="Texture2D" uid="uid://bbv4bhcat5ibi" path="res://Assets/Textures/button.png" id="3_uoipu"]
+[ext_resource type="Texture2D" uid="uid://dcpe1pqc4sa1t" path="res://Assets/Textures/button.png" id="3_uoipu"]
 
 [node name="rules" type="Node" unique_id=1053099348]
 script = ExtResource("1_o41bs")
@@ -38,6 +38,13 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 40
 text = "Return"
 horizontal_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=572813727]
+offset_left = 8.0
+offset_top = 210.0
+offset_right = 1924.0
+offset_bottom = 1079.0
+text = "DO NOT LET PEOPLE FROM NEW VILANOVA IN, POLICE IS TRYING TO ISOLATE A MURDERER"
 
 [connection signal="button_down" from="Button_Return/TextureButton_Return" to="Button_Return" method="_on_texture_button_return_button_down"]
 [connection signal="button_up" from="Button_Return/TextureButton_Return" to="Button_Return" method="_on_texture_button_return_button_up"]
