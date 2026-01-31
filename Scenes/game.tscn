@@ -24,8 +24,8 @@ events = [SubResource("InputEventKey_rku1e")]
 
 [sub_resource type="InputEventKey" id="InputEventKey_rfjv2"]
 device = -1
-keycode = 68
-unicode = 100
+keycode = 87
+unicode = 119
 
 [sub_resource type="Shortcut" id="Shortcut_1phco"]
 events = [SubResource("InputEventKey_rfjv2")]
