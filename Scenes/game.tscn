@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://ble20c75c31c7" path="res://Assets/Textures/sprite_3.png" id="12_rfjv2"]
 [ext_resource type="AudioStream" uid="uid://dueboy274f8pg" path="res://Assets/audio/pooja-bell-fast-415391.mp3" id="12_rku1e"]
 [ext_resource type="Texture2D" uid="uid://du82gd3w25kvm" path="res://Assets/Textures/escenas.png" id="13_1phco"]
+[ext_resource type="Texture2D" uid="uid://mnymnowl63is" path="res://Assets/Textures/tanga.png" id="14_1phco"]
 
 [sub_resource type="InputEventKey" id="InputEventKey_rku1e"]
 device = -1
@@ -268,6 +269,17 @@ shortcut = SubResource("Shortcut_nb51f")
 position = Vector2(944, 270)
 scale = Vector2(15.121875, 14.968889)
 sprite_frames = SubResource("SpriteFrames_mg4q0")
+
+[node name="Tanga" type="TextureRect" parent="." unique_id=1147573903]
+z_index = 5
+anchors_preset = -1
+anchor_right = 0.022000002
+anchor_bottom = 0.037
+offset_left = 656.0
+offset_top = 630.0
+offset_right = 1233.76
+offset_bottom = 1035.04
+texture = ExtResource("14_1phco")
 
 [connection signal="button_down" from="Button_Menu/TextureButton_Menu" to="Button_Menu" method="_on_texture_button_down"]
 [connection signal="button_up" from="Button_Menu/TextureButton_Menu" to="Button_Menu" method="_on_texture_button_up"]
