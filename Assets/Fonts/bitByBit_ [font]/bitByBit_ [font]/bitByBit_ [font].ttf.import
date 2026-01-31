@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://b3gvej0bmdm1s"
-path="res://.godot/imported/bitByBit_ [font].ttf-7daf5688ac97696e935ef63e1980b36a.fontdata"
+path="res://.godot/imported/bitByBit_ [font].ttf-0de395fecde5537403533787319d0bbc.fontdata"
 
 [deps]
 
-source_file="res://Textures/Fonts/bitByBit_ [font]/bitByBit_ [font]/bitByBit_ [font].ttf"
-dest_files=["res://.godot/imported/bitByBit_ [font].ttf-7daf5688ac97696e935ef63e1980b36a.fontdata"]
+source_file="res://Assets/Fonts/bitByBit_ [font]/bitByBit_ [font]/bitByBit_ [font].ttf"
+dest_files=["res://.godot/imported/bitByBit_ [font].ttf-0de395fecde5537403533787319d0bbc.fontdata"]
 
 [params]
 

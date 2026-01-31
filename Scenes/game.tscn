@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://dfn2vw2lesmwg"]
+
+[ext_resource type="Script" uid="uid://bqvtwhmsv1pce" path="res://Scripts/buttons.gd" id="1_ebmjs"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qxrlw"]
+bg_color = Color(0.6, 0.10980392, 0.15294118, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wrm1d"]
+bg_color = Color(0.27058825, 0.023529412, 0.05490196, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3dryh"]
+bg_color = Color(0.27058825, 0.023529412, 0.05490196, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="game" type="Node" unique_id=105694039]
+
+[node name="Button_Exit" type="Button" parent="." unique_id=493925094]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -107.0
+offset_bottom = 83.0
+grow_horizontal = 0
+size_flags_vertical = 8
+size_flags_stretch_ratio = 0.0
+theme_override_font_sizes/font_size = 60
+theme_override_styles/normal = SubResource("StyleBoxFlat_qxrlw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wrm1d")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3dryh")
+text = "Exit"
+script = ExtResource("1_ebmjs")
+
+[connection signal="button_down" from="Button_Exit" to="Button_Exit" method="_on_texture_button_down"]
+[connection signal="button_up" from="Button_Exit" to="Button_Exit" method="_on_texture_button_up"]
+[connection signal="pressed" from="Button_Exit" to="Button_Exit" method="_on_pressed"]

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d2ypquat64l37"
-path="res://.godot/imported/bitByBit_.png-41e73d538ad37c51d34478c1d776b231.ctex"
+path="res://.godot/imported/bitByBit_.png-732789b362e075a525e69b5136257478.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Textures/Fonts/bitByBit_ [font]/bitByBit_ [tileset]/bitByBit_.png"
-dest_files=["res://.godot/imported/bitByBit_.png-41e73d538ad37c51d34478c1d776b231.ctex"]
+source_file="res://Assets/Fonts/bitByBit_ [font]/bitByBit_ [tileset]/bitByBit_.png"
+dest_files=["res://.godot/imported/bitByBit_.png-732789b362e075a525e69b5136257478.ctex"]
 
 [params]
 
