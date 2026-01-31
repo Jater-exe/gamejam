@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://df72ff1ppr435"]
+
+[ext_resource type="Texture2D" uid="uid://du82gd3w25kvm" path="res://Assets/Textures/escenas.png" id="1_ykelj"]
+[ext_resource type="Script" uid="uid://o5pt8xrn22hc" path="res://Scripts/animated_porta.gd" id="2_fk6iw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fk6iw"]
+atlas = ExtResource("1_ykelj")
+region = Rect2(0, 0, 128, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fljtp"]
+atlas = ExtResource("1_ykelj")
+region = Rect2(128, 0, 128, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jg2jh"]
+atlas = ExtResource("1_ykelj")
+region = Rect2(0, 72, 128, 72)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tj3bi"]
+atlas = ExtResource("1_ykelj")
+region = Rect2(128, 72, 128, 72)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_b3dp4"]
+animations = [{
+"frames": [{
+"duration": 0.1,
+"texture": SubResource("AtlasTexture_fk6iw")
+}, {
+"duration": 0.1,
+"texture": SubResource("AtlasTexture_fljtp")
+}, {
+"duration": 0.1,
+"texture": SubResource("AtlasTexture_jg2jh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tj3bi")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Mouporta" type="Node2D" unique_id=1818372184]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=13461512]
+position = Vector2(954.00006, 537)
+scale = Vector2(14.921875, 14.888889)
+sprite_frames = SubResource("SpriteFrames_b3dp4")
+frame = 1
+script = ExtResource("2_fk6iw")
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="AnimatedSprite2D" method="_on_animation_finished"]
+[connection signal="animation_looped" from="AnimatedSprite2D" to="AnimatedSprite2D" method="_on_animation_finished"]
+[connection signal="ready" from="AnimatedSprite2D" to="AnimatedSprite2D" method="_ready"]
