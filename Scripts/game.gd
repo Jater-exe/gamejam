@@ -2,6 +2,8 @@ extends Node
 
 var times = 0
 
+var state:int = 0
+
 func _on_texture_button_menu_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/main.tscn")
 
@@ -20,14 +22,17 @@ func _input(event: InputEvent) -> void:
 		get_tree().change_scene_to_file("res://Scenes/main.tscn")
 
 func _on_texture_button_accept_pressed() -> void:
-	pass
+	if state == 2:
+		state = 0
 
 func _on_texture_button_deny_pressed() -> void:
-	pass
+	if state == 2:
+		state = 0
 
 
 func _on_texture_button_bell_pressed() -> void:
-	if times == 0:
+	if times == 0 and state == 0:
+		state = 1
 		$Button_Bell/AnimatedSprite2D.play()
 		
 		await get_tree().create_timer(1).timeout
