@@ -1,36 +1,11 @@
 [gd_scene format=3 uid="uid://6o245eb073fr"]
 
-<<<<<<< Updated upstream
-[ext_resource type="Script" path="res://Scripts/map.gd" id="1_26yhd"]
-[ext_resource type="Script" uid="uid://bqvtwhmsv1pce" path="res://Scripts/buttons.gd" id="1_ci6au"]
-[ext_resource type="Texture2D" uid="uid://cc0pc8wu35xq1" path="res://Assets/Textures/map_texture.png" id="2_p3ir5"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_26yhd"]
-bg_color = Color(0.6, 0.10980392, 0.15294118, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p3ir5"]
-bg_color = Color(0.27058825, 0.023529412, 0.05490196, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_myvm1"]
-bg_color = Color(0.27058825, 0.023529412, 0.05490196, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-=======
 [ext_resource type="Script" uid="uid://73ov2grfafg4" path="res://Scripts/map.gd" id="1_26yhd"]
 [ext_resource type="Texture2D" uid="uid://cc0pc8wu35xq1" path="res://Assets/Textures/map_texture.png" id="2_p3ir5"]
 [ext_resource type="Script" uid="uid://bkq7k2sxhvokh" path="res://Scripts/button_return.gd" id="3_myvm1"]
 [ext_resource type="Texture2D" uid="uid://chmypxkfgq7ms" path="res://Assets/Textures/button2.png" id="4_q0mm3"]
->>>>>>> Stashed changes
+
 
 [node name="Map" type="Node" unique_id=1646688916]
 script = ExtResource("1_26yhd")
@@ -55,96 +30,7 @@ grow_vertical = 2
 texture = ExtResource("2_p3ir5")
 metadata/_edit_group_ = true
 
-<<<<<<< Updated upstream
-[node name="Button_Return" type="Button" parent="Control" unique_id=158264621]
-custom_minimum_size = Vector2(140, 60)
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = 1652.0
-offset_top = 938.0
-offset_right = 1832.0
-offset_bottom = 1021.0
-grow_horizontal = 0
-size_flags_vertical = 8
-size_flags_stretch_ratio = 0.0
-theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxFlat_26yhd")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_p3ir5")
-theme_override_styles/hover = SubResource("StyleBoxFlat_myvm1")
-text = "Return"
-script = ExtResource("1_ci6au")
 
-[node name="newvilanova" type="RichTextLabel" parent="Control" unique_id=1260796699]
-layout_mode = 0
-offset_left = 155.0
-offset_top = 293.0
-offset_right = 648.0
-offset_bottom = 424.0
-bbcode_enabled = true
-text = "NEW VILANOVA
-"
-
-[node name="nugget town" type="RichTextLabel" parent="Control" unique_id=1603056007]
-layout_mode = 0
-offset_left = 431.0
-offset_top = 161.0
-offset_right = 623.0
-offset_bottom = 314.0
-text = "NUGGET TOWN"
-
-[node name="TORROGONA" type="RichTextLabel" parent="Control" unique_id=1237859571]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.1
-anchor_top = 0.37500003
-anchor_right = 0.1
-anchor_bottom = 0.37500003
-offset_left = 827.0
-offset_top = 276.0
-offset_right = 1060.0
-offset_bottom = 479.0
-text = "TORROGONA
-"
-
-[node name="SARSUELA" type="RichTextLabel" parent="Control" unique_id=1778839704]
-layout_mode = 0
-offset_left = 1229.0
-offset_top = 339.0
-offset_right = 1529.0
-offset_bottom = 545.0
-text = "SARSUELA"
-
-[node name="BARSIFONA" type="RichTextLabel" parent="Control" unique_id=862676507]
-layout_mode = 0
-offset_left = 630.0
-offset_top = 603.0
-offset_right = 949.0
-offset_bottom = 886.0
-text = "BARSIFONA"
-
-[node name="REINONA" type="RichTextLabel" parent="Control" unique_id=550833143]
-layout_mode = 0
-offset_left = 845.0
-offset_top = 798.0
-offset_right = 1164.0
-offset_bottom = 1015.0
-text = "REINONA"
-
-[node name="MUNDITOS" type="RichTextLabel" parent="Control" unique_id=1017259602]
-layout_mode = 0
-offset_left = 566.0
-offset_top = 465.0
-offset_right = 758.0
-offset_bottom = 638.0
-text = "MUNDETA"
-
-[connection signal="button_down" from="Control/Button_Return" to="Control/Button_Return" method="_on_texture_button_down"]
-[connection signal="button_up" from="Control/Button_Return" to="Control/Button_Return" method="_on_texture_button_up"]
-[connection signal="pressed" from="Control/Button_Return" to="." method="_on_button_return_pressed"]
-[connection signal="pressed" from="Control/Button_Return" to="Control/Button_Return" method="_on_pressed"]
-=======
 [node name="Button_Return" type="MarginContainer" parent="." unique_id=53355034]
 offset_left = 1579.0
 offset_top = 36.0
@@ -167,4 +53,4 @@ horizontal_alignment = 1
 [connection signal="button_down" from="Button_Return/TextureButton_Return" to="Button_Return" method="_on_texture_button_return_button_down"]
 [connection signal="button_up" from="Button_Return/TextureButton_Return" to="Button_Return" method="_on_texture_button_return_button_up"]
 [connection signal="pressed" from="Button_Return/TextureButton_Return" to="." method="_on_texture_button_return_pressed"]
->>>>>>> Stashed changes
+

@@ -31,3 +31,7 @@ func write_text():
 
 func _on_timer_timeout() -> void:
 	get_tree().change_scene_to_file("res://Scenes/game.tscn")
+
+func _input(event: InputEvent) -> void:
+	if event.is_action("space"):
+		get_tree().change_scene_to_file("res://Scenes/game.tscn")
