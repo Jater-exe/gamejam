@@ -1,6 +1,6 @@
 extends Node
 
-const MASKS_JSON = "res://Assets/texto/masks.json"
+const MASKS_JSON = "res://Assets/Text/masks.json"
 
 
 func load_json(path: String) -> Variant:
@@ -27,7 +27,7 @@ func _ready() -> void:
 	var data = load_json(MASKS_JSON)
 	if data is Array and data.size() > 0:
 		var random_element = data.pick_random()
-		var LOAD_PATH = "res://Assets/Textures/"
+		var LOAD_PATH = "res://Assets/Textures/mask_oficial/"
 		LOAD_PATH += random_element
 		self.texture = load(LOAD_PATH)
 		
