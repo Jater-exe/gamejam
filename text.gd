@@ -1,18 +1,29 @@
-extends Label
+extends RichTextLabel
 
-var num_text: int = 0
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	$".".text = "Bon dia"
-	$Timer.start()
+@onready var label = $RichTextLabel
+@onready var typing_sound = $AudioStreamPlayer
 
+var full_text := ""
+var char_index := 0
+var typing_speed := 0.05
 
-func _on_timer_timeout() -> void:
-	num_text += 1
-	if num_text == 1:
-		$".".text = "Tic tac"
-	elif num_text == 2:
-		$".".text = "Adeu"
-	else: 
-		$Timer.stop()
-		get_tree().change_scene_to_file("res://Scenes/game.tscn")
+func _ready():
+	load_text_file("res://textoinicio.txt")
+	label.text = full_text
+	label.visible_characters = 0
+	type_text()
+
+func load_text_file(path: String):
+	var file = FileAccess.open(path, FileAccess.READ)
+	if file:
+		full_text = file.get_as_text()
+
+func type_text():
+	while char_index < full_text.length():
+		char_index += 1
+		label.visible_characters = char_index
+		
+		if typing_sound and full_text[char_index - 1] != " ":
+			typing_sound.play()
+		
+		await get_tree().create_timer(typing_speed).timeout
