@@ -1,6 +1,7 @@
 extends Node
 
 var times = 0
+@onready var typing_sound = $Button_Bell/audiocampana
 
 var state:int = 0
 
@@ -32,9 +33,9 @@ func _on_texture_button_deny_pressed() -> void:
 
 func _on_texture_button_bell_pressed() -> void:
 	if times == 0 and state == 0:
+		typing_sound.play()
 		state = 1
 		$Button_Bell/AnimatedSprite2D.play()
-		
 		await get_tree().create_timer(1).timeout
 		
 		$Button_Bell/AnimatedSprite2D.stop()
