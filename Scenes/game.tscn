@@ -25,7 +25,8 @@ corner_radius_bottom_left = 10
 
 [node name="game" type="Node" unique_id=105694039]
 
-[node name="Button_Exit" type="Button" parent="." unique_id=493925094]
+[node name="Button_Menu" type="Button" parent="." unique_id=493925094]
+custom_minimum_size = Vector2(200, 120)
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
@@ -38,9 +39,9 @@ theme_override_font_sizes/font_size = 60
 theme_override_styles/normal = SubResource("StyleBoxFlat_qxrlw")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_wrm1d")
 theme_override_styles/hover = SubResource("StyleBoxFlat_3dryh")
-text = "Exit"
+text = "Menu"
 script = ExtResource("1_ebmjs")
 
-[connection signal="button_down" from="Button_Exit" to="Button_Exit" method="_on_texture_button_down"]
-[connection signal="button_up" from="Button_Exit" to="Button_Exit" method="_on_texture_button_up"]
-[connection signal="pressed" from="Button_Exit" to="Button_Exit" method="_on_pressed"]
+[connection signal="button_down" from="Button_Menu" to="Button_Menu" method="_on_texture_button_down"]
+[connection signal="button_up" from="Button_Menu" to="Button_Menu" method="_on_texture_button_up"]
+[connection signal="pressed" from="Button_Menu" to="Button_Menu" method="_on_pressed"]
