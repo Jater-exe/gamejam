@@ -33,3 +33,4 @@ func _on_texture_button_bell_pressed() -> void:
 		await get_tree().create_timer(1).timeout
 		
 		$Button_Bell/AnimatedSprite2D.stop()
+		get_tree().change_scene_to_file("res://Scenes/mouporta.tscn")
