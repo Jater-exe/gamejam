@@ -9,12 +9,14 @@
 
 [node name="Control" type="Control" parent="." unique_id=678424932]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 1812.0
-offset_bottom = 1062.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_h44gi")
 
-[node name="TextureRect2" type="TextureRect" parent="Control" unique_id=1086048179]
+[node name="TextureRect2" type="TextureRect" parent="Control" unique_id=885683239]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -50,13 +52,17 @@ one_shot = true
 
 [node name="TextureRect" type="TextureRect" parent="Control" unique_id=120748879]
 layout_mode = 1
-anchors_preset = -1
-anchor_right = 0.19100001
-anchor_bottom = 0.23900001
-offset_left = 732.0
-offset_top = 283.0
-offset_right = 695.90796
-offset_bottom = 337.182
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -160.0
+offset_top = -245.0
+offset_right = 153.0
+offset_bottom = 21.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("3_cegie")
 
 [connection signal="timeout" from="Control/Timer" to="Control" method="_on_timer_timeout"]
