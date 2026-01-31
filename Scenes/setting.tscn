@@ -1,27 +1,44 @@
 [gd_scene format=3 uid="uid://c3ug4ihnh6i5o"]
 
-[ext_resource type="Script" uid="uid://cxh3gu87dachb" path="res://text.gd" id="1_h44gi"]
+[ext_resource type="Script" uid="uid://4yexv8wxdq6o" path="res://Scenes/control.gd" id="1_h44gi"]
+[ext_resource type="AudioStream" uid="uid://dueay3f3fyjt6" path="res://Assets/audio/typing-keyboard-asmr-356116.mp3" id="2_47wfv"]
+[ext_resource type="Texture2D" uid="uid://mt876360aaai" path="res://Assets/Pixel Art Police Officer PNG.jpg" id="3_cegie"]
 
 [node name="Setting" type="Node" unique_id=2137079640]
 
-[node name="Label" type="Label" parent="." unique_id=1171558151]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -11.5
-offset_right = 20.0
-offset_bottom = 11.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 60
-text = "Bon dia"
-horizontal_alignment = 1
-vertical_alignment = 1
+[node name="Control" type="Control" parent="." unique_id=678424932]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1812.0
+offset_bottom = 1062.0
 script = ExtResource("1_h44gi")
 
-[node name="Timer" type="Timer" parent="Label" unique_id=1905792217]
+[node name="RichTextLabel" type="RichTextLabel" parent="Control" unique_id=980282248]
+layout_mode = 0
+offset_left = 47.0
+offset_top = 25.0
+offset_right = 1624.0
+offset_bottom = 1054.0
+theme_override_font_sizes/normal_font_size = 60
+theme_override_font_sizes/bold_font_size = 60
+theme_override_font_sizes/bold_italics_font_size = 60
+theme_override_font_sizes/italics_font_size = 60
+theme_override_font_sizes/mono_font_size = 60
+bbcode_enabled = true
+fit_content = true
 
-[connection signal="timeout" from="Label/Timer" to="Label" method="_on_timer_timeout"]
+[node name="typingsound" type="AudioStreamPlayer2D" parent="Control" unique_id=1254140678]
+stream = ExtResource("2_47wfv")
+volume_db = 17.761
+autoplay = true
+
+[node name="TextureRect" type="TextureRect" parent="Control" unique_id=120748879]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.19100001
+anchor_bottom = 0.23900001
+offset_left = 772.0
+offset_top = 595.0
+offset_right = 735.90796
+offset_bottom = 649.182
+texture = ExtResource("3_cegie")
