@@ -1,11 +1,10 @@
 [gd_scene format=3 uid="uid://cgspdebfb1hw6"]
 
-[ext_resource type="Script" path="res://Scripts/main.gd" id="1_21xkr"]
+[ext_resource type="Script" uid="uid://1rc5n1armlbv" path="res://Scripts/main.gd" id="1_21xkr"]
 [ext_resource type="Texture2D" uid="uid://jiceaiuf0mon" path="res://Assets/Textures/portada0.png" id="2_21xkr"]
 [ext_resource type="Script" uid="uid://bp4c0br0nj4t7" path="res://Scripts/menu_buttons.gd" id="2_jjvhh"]
-[ext_resource type="Script" path="res://Scripts/margin_container.gd" id="3_6bp64"]
-[ext_resource type="Texture2D" uid="uid://dcpe1pqc4sa1t" path="res://Assets/Textures/button.png" id="3_kry3j"]
-[ext_resource type="Script" path="res://Scripts/margin_container_2.gd" id="5_kry3j"]
+[ext_resource type="Script" uid="uid://bqvtwhmsv1pce" path="res://Scripts/buttons.gd" id="3_8gbba"]
+[ext_resource type="Texture2D" uid="uid://bbv4bhcat5ibi" path="res://Assets/Textures/button.png" id="3_kry3j"]
 
 [node name="Main" type="Control" unique_id=117082661]
 layout_mode = 3
@@ -44,7 +43,7 @@ script = ExtResource("2_jjvhh")
 
 [node name="Button_Start" type="MarginContainer" parent="Container/VBoxContainer" unique_id=696324519]
 layout_mode = 2
-script = ExtResource("3_6bp64")
+script = ExtResource("3_8gbba")
 
 [node name="TextureButton_Start" type="TextureButton" parent="Container/VBoxContainer/Button_Start" unique_id=1517040016]
 custom_minimum_size = Vector2(140, 100)
@@ -60,7 +59,7 @@ horizontal_alignment = 1
 
 [node name="Button_Exit" type="MarginContainer" parent="Container/VBoxContainer" unique_id=1816165040]
 layout_mode = 2
-script = ExtResource("5_kry3j")
+script = ExtResource("3_8gbba")
 
 [node name="TextureButton_Exit" type="TextureButton" parent="Container/VBoxContainer/Button_Exit" unique_id=78903822]
 custom_minimum_size = Vector2(140, 100)
@@ -83,9 +82,9 @@ offset_bottom = 701.0
 theme_override_font_sizes/font_size = 78
 text = "COME IN"
 
-[connection signal="button_down" from="Container/VBoxContainer/Button_Start/TextureButton_Start" to="Container/VBoxContainer/Button_Start" method="_on_texture_button_start_button_down"]
-[connection signal="button_up" from="Container/VBoxContainer/Button_Start/TextureButton_Start" to="Container/VBoxContainer/Button_Start" method="_on_texture_button_start_button_up"]
+[connection signal="button_down" from="Container/VBoxContainer/Button_Start/TextureButton_Start" to="Container/VBoxContainer/Button_Start" method="_on_texture_button_down"]
+[connection signal="button_up" from="Container/VBoxContainer/Button_Start/TextureButton_Start" to="Container/VBoxContainer/Button_Start" method="_on_texture_button_up"]
 [connection signal="pressed" from="Container/VBoxContainer/Button_Start/TextureButton_Start" to="Container/VBoxContainer" method="_on_texture_button_start_pressed"]
-[connection signal="button_down" from="Container/VBoxContainer/Button_Exit/TextureButton_Exit" to="Container/VBoxContainer/Button_Exit" method="_on_texture_button_exit_button_down"]
-[connection signal="button_up" from="Container/VBoxContainer/Button_Exit/TextureButton_Exit" to="Container/VBoxContainer/Button_Exit" method="_on_texture_button_exit_button_up"]
+[connection signal="button_down" from="Container/VBoxContainer/Button_Exit/TextureButton_Exit" to="Container/VBoxContainer/Button_Exit" method="_on_texture_button_down"]
+[connection signal="button_up" from="Container/VBoxContainer/Button_Exit/TextureButton_Exit" to="Container/VBoxContainer/Button_Exit" method="_on_texture_button_up"]
 [connection signal="pressed" from="Container/VBoxContainer/Button_Exit/TextureButton_Exit" to="Container/VBoxContainer" method="_on_texture_button_exit_pressed"]

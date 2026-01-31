@@ -1,4 +1,4 @@
-extends Button
+extends MarginContainer
 
 @export var shrink_scale: float = 0.95
 @export var anim_duration: float = 0.1

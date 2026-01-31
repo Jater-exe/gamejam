@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://bustrnc7a6evp"]
 
 [ext_resource type="Script" uid="uid://vpcum6mduvsy" path="res://rules.gd" id="1_o41bs"]
+[ext_resource type="Script" uid="uid://bqvtwhmsv1pce" path="res://Scripts/buttons.gd" id="1_twi68"]
 [ext_resource type="Texture2D" uid="uid://bko6dhfig1a07" path="res://Assets/Textures/bg.png" id="2_ndyx5"]
-[ext_resource type="Script" path="res://Scripts/button_return.gd" id="2_uoipu"]
 [ext_resource type="Texture2D" uid="uid://bbv4bhcat5ibi" path="res://Assets/Textures/button.png" id="3_uoipu"]
 [ext_resource type="Texture2D" uid="uid://2d0xlkyu0m41" path="res://Assets/Textures/Openbook.png" id="3_ypbk6"]
 
@@ -50,7 +50,7 @@ offset_left = 1581.0
 offset_top = 36.0
 offset_right = 1881.0
 offset_bottom = 147.0
-script = ExtResource("2_uoipu")
+script = ExtResource("1_twi68")
 
 [node name="TextureButton_Return" type="TextureButton" parent="Button_Return" unique_id=347766241]
 custom_minimum_size = Vector2(140, 100)
@@ -76,6 +76,6 @@ text = "DO NOT LET PEOPLE FROM NEW VILANOVA IN. THE POLICE SUSPECTS THAT A MURDE
 
 PEOPLE DRESSED UP ACORDINGLY TO THER PLACE OF ORIGIN SHALL BE ALLOWED TO PASS."
 
-[connection signal="button_down" from="Button_Return/TextureButton_Return" to="Button_Return" method="_on_texture_button_return_button_down"]
-[connection signal="button_up" from="Button_Return/TextureButton_Return" to="Button_Return" method="_on_texture_button_return_button_up"]
+[connection signal="button_down" from="Button_Return/TextureButton_Return" to="Button_Return" method="_on_texture_button_down"]
+[connection signal="button_up" from="Button_Return/TextureButton_Return" to="Button_Return" method="_on_texture_button_up"]
 [connection signal="pressed" from="Button_Return/TextureButton_Return" to="." method="_on_texture_button_return_pressed"]
