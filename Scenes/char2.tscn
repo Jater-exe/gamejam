@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://d36qqho8i7vje"]
+
+[ext_resource type="Texture2D" uid="uid://dftrm8ku866oa" path="res://Assets/Textures/character_walk.png" id="1_d1i0o"]
+[ext_resource type="Script" uid="uid://mtqvltjifbrp" path="res://Scripts/character.gd" id="2_ggmni"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lucfs"]
+atlas = ExtResource("1_d1i0o")
+region = Rect2(0, 0, 1024, 1536)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qx483"]
+atlas = ExtResource("1_d1i0o")
+region = Rect2(1024, 0, 1024, 1536)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2yloy"]
+atlas = ExtResource("1_d1i0o")
+region = Rect2(0, 1536, 1024, 1536)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xmuwv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lucfs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qx483")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lucfs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2yloy")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Char2" type="AnimatedSprite2D" unique_id=806479825]
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_xmuwv")
+script = ExtResource("2_ggmni")
+
+[connection signal="ready" from="." to="." method="_ready"]
