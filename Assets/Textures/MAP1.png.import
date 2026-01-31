@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dinl18sbjiwer"
-path="res://.godot/imported/mask2.png-fa338442f9a9c536b5adf15707b11fa4.ctex"
+uid="uid://ncdbl2mt3vne"
+path="res://.godot/imported/MAP1.png-7214ae112be4bce92c08009a6e56493f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/mask2.png"
-dest_files=["res://.godot/imported/mask2.png-fa338442f9a9c536b5adf15707b11fa4.ctex"]
+source_file="res://Assets/Textures/MAP1.png"
+dest_files=["res://.godot/imported/MAP1.png-7214ae112be4bce92c08009a6e56493f.ctex"]
 
 [params]
 

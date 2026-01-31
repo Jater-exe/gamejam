@@ -42,6 +42,50 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_3dryh")
 text = "Menu"
 script = ExtResource("1_ebmjs")
 
+[node name="Button_Map" type="Button" parent="." unique_id=1419808491]
+custom_minimum_size = Vector2(140, 60)
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 72.0
+offset_top = -123.0
+offset_right = 212.0
+offset_bottom = -40.0
+grow_vertical = 0
+size_flags_vertical = 8
+size_flags_stretch_ratio = 0.0
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_qxrlw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wrm1d")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3dryh")
+text = "Map"
+script = ExtResource("1_ebmjs")
+
+[node name="Button_Book" type="Button" parent="." unique_id=1868244281]
+custom_minimum_size = Vector2(140, 60)
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -1650.0
+offset_top = 956.0
+offset_right = -1510.0
+offset_bottom = 1039.0
+grow_horizontal = 0
+size_flags_vertical = 8
+size_flags_stretch_ratio = 0.0
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_qxrlw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wrm1d")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3dryh")
+text = "Book"
+script = ExtResource("1_ebmjs")
+
 [connection signal="button_down" from="Button_Menu" to="Button_Menu" method="_on_texture_button_down"]
 [connection signal="button_up" from="Button_Menu" to="Button_Menu" method="_on_texture_button_up"]
 [connection signal="pressed" from="Button_Menu" to="Button_Menu" method="_on_pressed"]
+[connection signal="button_down" from="Button_Map" to="Button_Map" method="_on_texture_button_down"]
+[connection signal="button_up" from="Button_Map" to="Button_Map" method="_on_texture_button_up"]
+[connection signal="pressed" from="Button_Map" to="Button_Map" method="_on_pressed"]
+[connection signal="button_down" from="Button_Book" to="Button_Book" method="_on_texture_button_down"]
+[connection signal="button_up" from="Button_Book" to="Button_Book" method="_on_texture_button_up"]
+[connection signal="pressed" from="Button_Book" to="Button_Book" method="_on_pressed"]
