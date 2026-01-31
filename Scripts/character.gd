@@ -19,8 +19,9 @@ func _process(delta: float) -> void:
 	if _animated_sprite.scale.x >= 1:
 		_animated_sprite.stop()
 	if time >= 0.25 and _animated_sprite.scale.x < 1:
-		#_animated_sprite.scale.x += 0.1
-		#_animated_sprite.scale.y += 0.1
+		_animated_sprite.scale.x += 0.1
+		_animated_sprite.scale.y += 0.1
+		_animated_sprite.position.y += 100
 		time = delta
 	elif _animated_sprite.scale.x < 1:
 		time += delta

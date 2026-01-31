@@ -5,6 +5,9 @@ var times = 0
 
 var state:int = 0
 
+var scene
+var instance
+
 func _on_texture_button_menu_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/main.tscn")
 
@@ -24,12 +27,21 @@ func _input(event: InputEvent) -> void:
 
 func _on_texture_button_accept_pressed() -> void:
 	if state == 2:
+		instance.queue_free()
 		state = 0
 
 func _on_texture_button_deny_pressed() -> void:
 	if state == 2:
+		instance.queue_free()
 		state = 0
 
+func person_arrive():
+	scene = preload("res://Scenes/char2.tscn")
+	instance = scene.instantiate()
+	instance.name = "person"
+	add_child(instance)
+	instance.position = Vector2(950, 300)
+	state = 2
 
 func _on_texture_button_bell_pressed() -> void:
 	if times == 0 and state == 0:
@@ -42,7 +54,10 @@ func _on_texture_button_bell_pressed() -> void:
 		$AnimatedDoor.play()
 		$AnimatedDoor.visible = true;
 
-
-func _on_animated_door_animation_looped() -> void:
-	$AnimatedDoor.stop()
+func _on_animated_door_animation_finished() -> void:
 	$AnimatedDoor.visible = false;
+	$AnimatedDoor.stop()
+	person_arrive()
+
+func _on_animated_door_ready() -> void:
+	$AnimatedDoor.visible = false
