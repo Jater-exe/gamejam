@@ -1,3 +1,5 @@
 You have been hired in a border.
+
 Your task is to either deny or accept the entry.
+
 Follow the information to do so.
