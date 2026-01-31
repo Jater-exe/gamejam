@@ -37,7 +37,7 @@ func _on_texture_button_bell_pressed() -> void:
 		state = 1
 		$Button_Bell/AnimatedBell.play()
 		await get_tree().create_timer(1).timeout
-		
+		bell_sound.stop()
 		$Button_Bell/AnimatedBell.stop()
 		$AnimatedDoor.play()
 		$AnimatedDoor.visible = true;
