@@ -36,8 +36,18 @@ func _ready() -> void:
 	if data is Array and data.size() > 0:
 		var random_element = data.pick_random()
 		$Surename.text = random_element
-		
-
+	
+	data = load_json(AGE_JSON)
+	if data is Array and data.size() > 0:
+		var random_element = data.pick_random()
+		$Age.text = random_element
+	
+	data = load_json(BIRTH_JSON)
+	if data is Array and data.size() > 0:
+		var random_element = data.pick_random()
+		$Birth.text = random_element
+	
+	$Number.text = generate_number()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
@@ -46,13 +56,13 @@ func _process(delta: float) -> void:
 
 
 
-func generar_codigo() -> String:
+func generate_number() -> String:
 	randomize()
 
 	# Número random de 8 dígitos
-	var numero = randi_range(10000000, 99999999)
+	var number = randi_range(10000000, 99999999)
 
 	# Letra random (A-Z)
-	var letra = char(randi_range(65, 90))
+	var letter = char(randi_range(65, 90))
 
-	return str(numero) + letra
+	return str(number) + letter
