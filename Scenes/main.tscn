@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://cgspdebfb1hw6"]
 
+[ext_resource type="Script" uid="uid://1rc5n1armlbv" path="res://Scripts/main.gd" id="1_21xkr"]
 [ext_resource type="Texture2D" uid="uid://dg4ixoaig61ir" path="res://Assets/Textures/mask2.png" id="1_jjgbg"]
 [ext_resource type="Script" uid="uid://bp4c0br0nj4t7" path="res://Scripts/menu_buttons.gd" id="2_jjvhh"]
 [ext_resource type="Script" uid="uid://bmaele3cecevl" path="res://Scripts/margin_container.gd" id="3_6bp64"]
@@ -9,6 +10,7 @@
 [node name="Main" type="Control" unique_id=117082661]
 layout_mode = 3
 anchors_preset = 0
+script = ExtResource("1_21xkr")
 
 [node name="Container" type="Control" parent="." unique_id=657263555]
 anchors_preset = 0
