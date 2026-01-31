@@ -8,6 +8,26 @@
 [ext_resource type="Texture2D" uid="uid://c8h62tcnw75e7" path="res://Assets/Textures/book.png" id="5_1l0tm"]
 [ext_resource type="Script" path="res://Scripts/button_map.gd" id="5_wowpa"]
 [ext_resource type="Texture2D" uid="uid://cc0pc8wu35xq1" path="res://Assets/Textures/map_texture.png" id="7_v158k"]
+[ext_resource type="Texture2D" uid="uid://b2anit7jl35f" path="res://Assets/Textures/sprite_0.png" id="9_ldgsr"]
+[ext_resource type="Texture2D" uid="uid://bkprs6fv5e7lp" path="res://Assets/Textures/sprite_1.png" id="10_o5yvi"]
+[ext_resource type="Texture2D" uid="uid://d1db5ejm22qfc" path="res://Assets/Textures/sprite_2.png" id="11_rku1e"]
+[ext_resource type="Texture2D" uid="uid://ble20c75c31c7" path="res://Assets/Textures/sprite_3.png" id="12_rfjv2"]
+
+[sub_resource type="InputEventKey" id="InputEventKey_rku1e"]
+device = -1
+keycode = 65
+unicode = 97
+
+[sub_resource type="Shortcut" id="Shortcut_rfjv2"]
+events = [SubResource("InputEventKey_rku1e")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_rfjv2"]
+device = -1
+keycode = 68
+unicode = 100
+
+[sub_resource type="Shortcut" id="Shortcut_1phco"]
+events = [SubResource("InputEventKey_rfjv2")]
 
 [node name="game" type="Node" unique_id=105694039]
 script = ExtResource("1_qxrlw")
@@ -40,10 +60,10 @@ text = "Menu"
 horizontal_alignment = 1
 
 [node name="Button_Book" type="MarginContainer" parent="." unique_id=1417299664]
-offset_left = 351.0
-offset_top = 797.0
-offset_right = 531.0
-offset_bottom = 1037.0
+offset_left = 405.0
+offset_top = 743.0
+offset_right = 585.0
+offset_bottom = 983.0
 script = ExtResource("4_i6g32")
 
 [node name="TextureButton_Book" type="TextureButton" parent="Button_Book" unique_id=892263265]
@@ -53,10 +73,10 @@ texture_normal = ExtResource("5_1l0tm")
 stretch_mode = 0
 
 [node name="Button_Map" type="MarginContainer" parent="." unique_id=2137947835]
-offset_left = 79.0
-offset_top = 858.0
-offset_right = 259.0
-offset_bottom = 978.0
+offset_left = 130.0
+offset_top = 807.0
+offset_right = 310.0
+offset_bottom = 927.0
 script = ExtResource("5_wowpa")
 
 [node name="TextureButton_Map" type="TextureButton" parent="Button_Map" unique_id=1123907491]
@@ -64,6 +84,35 @@ custom_minimum_size = Vector2(140, 100)
 layout_mode = 2
 texture_normal = ExtResource("7_v158k")
 ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Button_Accept" type="MarginContainer" parent="." unique_id=1367204874]
+offset_left = 1278.0
+offset_top = 750.0
+offset_right = 1458.0
+offset_bottom = 930.0
+
+[node name="TextureButton_Accept" type="TextureButton" parent="Button_Accept" unique_id=162484587]
+custom_minimum_size = Vector2(140, 100)
+layout_mode = 2
+shortcut = SubResource("Shortcut_rfjv2")
+texture_normal = ExtResource("9_ldgsr")
+texture_pressed = ExtResource("10_o5yvi")
+stretch_mode = 0
+
+[node name="Button_Deny" type="MarginContainer" parent="." unique_id=1433026260]
+offset_left = 1585.0
+offset_top = 750.0
+offset_right = 1765.0
+offset_bottom = 930.0
+
+[node name="TextureButton_Deny" type="TextureButton" parent="Button_Deny" unique_id=525311759]
+custom_minimum_size = Vector2(140, 100)
+layout_mode = 2
+keep_pressed_outside = true
+shortcut = SubResource("Shortcut_1phco")
+texture_normal = ExtResource("11_rku1e")
+texture_pressed = ExtResource("12_rfjv2")
 stretch_mode = 0
 
 [connection signal="button_down" from="Button_Menu/TextureButton_Menu" to="Button_Menu" method="_on_texture_button_menu_button_down"]
@@ -75,3 +124,9 @@ stretch_mode = 0
 [connection signal="button_down" from="Button_Map/TextureButton_Map" to="Button_Map" method="_on_texture_button_map_button_down"]
 [connection signal="button_up" from="Button_Map/TextureButton_Map" to="Button_Map" method="_on_texture_button_map_button_up"]
 [connection signal="pressed" from="Button_Map/TextureButton_Map" to="." method="_on_texture_button_map_pressed"]
+[connection signal="button_down" from="Button_Accept/TextureButton_Accept" to="Button_Accept" method="_on_texture_button_book_button_down"]
+[connection signal="button_up" from="Button_Accept/TextureButton_Accept" to="Button_Accept" method="_on_texture_button_book_button_up"]
+[connection signal="pressed" from="Button_Accept/TextureButton_Accept" to="." method="_on_texture_button_accept_pressed"]
+[connection signal="button_down" from="Button_Deny/TextureButton_Deny" to="Button_Deny" method="_on_texture_button_book_button_down"]
+[connection signal="button_up" from="Button_Deny/TextureButton_Deny" to="Button_Deny" method="_on_texture_button_book_button_up"]
+[connection signal="pressed" from="Button_Deny/TextureButton_Deny" to="." method="_on_texture_button_deny_pressed"]
