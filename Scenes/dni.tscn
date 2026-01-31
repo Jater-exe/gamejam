@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://ca0a1j1y0gsnc"]
+
+[ext_resource type="Script" uid="uid://cmaca3e54snun" path="res://Scripts/dni.gd" id="1_euw0s"]
+
+[node name="Id" type="TextureRect" unique_id=1421850891]
+script = ExtResource("1_euw0s")
+
+[node name="Name" type="Label" parent="." unique_id=1664159891]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 15.0
+
+[node name="Surename" type="Label" parent="." unique_id=30857692]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 15.0
+
+[node name="Age" type="Label" parent="." unique_id=163698668]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 15.0
+
+[node name="Birth" type="Label" parent="." unique_id=845421800]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 15.0
+
+[node name="Number" type="Label" parent="." unique_id=1833759333]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 15.0

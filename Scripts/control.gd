@@ -3,9 +3,9 @@ extends Control
 @onready var text_label = $RichTextLabel
 @onready var typing_sound = $typingsound
 
-var full_text := "You are a custom's agent. 
-Your task is to either deny or accept the entries.
-Follow the information to do so.."
+var full_text := "You are a customs agent. 
+Your task is to grant or deny entry.
+Follow the guidelines."
 var char_index := 0
 var speed := 0.05  # segundos entre letras
 
