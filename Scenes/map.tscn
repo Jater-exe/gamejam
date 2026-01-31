@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://6o245eb073fr"]
+
+[ext_resource type="Script" uid="uid://73ov2grfafg4" path="res://Scripts/map.gd" id="1_26yhd"]
+[ext_resource type="Script" uid="uid://bqvtwhmsv1pce" path="res://Scripts/buttons.gd" id="1_ci6au"]
+[ext_resource type="Texture2D" uid="uid://dw47nmfkyagm6" path="res://Assets/Textures/map_texture.png" id="2_p3ir5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_26yhd"]
+bg_color = Color(0.6, 0.10980392, 0.15294118, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p3ir5"]
+bg_color = Color(0.27058825, 0.023529412, 0.05490196, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_myvm1"]
+bg_color = Color(0.27058825, 0.023529412, 0.05490196, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="Map" type="Node" unique_id=1646688916]
+script = ExtResource("1_26yhd")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1997761889]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_p3ir5")
+metadata/_edit_group_ = true
+
+[node name="Button_Return" type="Button" parent="." unique_id=158264621]
+custom_minimum_size = Vector2(140, 60)
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -218.0
+offset_top = 938.0
+offset_right = -78.0
+offset_bottom = 1021.0
+grow_horizontal = 0
+size_flags_vertical = 8
+size_flags_stretch_ratio = 0.0
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_26yhd")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_p3ir5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_myvm1")
+text = "Return"
+script = ExtResource("1_ci6au")
+
+[connection signal="button_down" from="Button_Return" to="Button_Return" method="_on_texture_button_down"]
+[connection signal="button_up" from="Button_Return" to="Button_Return" method="_on_texture_button_up"]
+[connection signal="pressed" from="Button_Return" to="." method="_on_button_return_pressed"]
+[connection signal="pressed" from="Button_Return" to="Button_Return" method="_on_pressed"]

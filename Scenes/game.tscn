@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dfn2vw2lesmwg"]
 
 [ext_resource type="Script" uid="uid://bqvtwhmsv1pce" path="res://Scripts/buttons.gd" id="1_ebmjs"]
+[ext_resource type="Script" uid="uid://dq1efcsdpdl2i" path="res://Scripts/game.gd" id="1_qxrlw"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qxrlw"]
 bg_color = Color(0.6, 0.10980392, 0.15294118, 1)
@@ -23,7 +24,14 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ebmjs"]
+load_path = "res://.godot/imported/book2.png-1de4932ae554fab41603b6922e05f7b0.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wrm1d"]
+texture = SubResource("CompressedTexture2D_ebmjs")
+
 [node name="game" type="Node" unique_id=105694039]
+script = ExtResource("1_qxrlw")
 
 [node name="Button_Menu" type="Button" parent="." unique_id=493925094]
 custom_minimum_size = Vector2(140, 60)
@@ -74,7 +82,7 @@ grow_horizontal = 0
 size_flags_vertical = 8
 size_flags_stretch_ratio = 0.0
 theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxFlat_qxrlw")
+theme_override_styles/normal = SubResource("StyleBoxTexture_wrm1d")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_wrm1d")
 theme_override_styles/hover = SubResource("StyleBoxFlat_3dryh")
 text = "Book"
@@ -82,10 +90,13 @@ script = ExtResource("1_ebmjs")
 
 [connection signal="button_down" from="Button_Menu" to="Button_Menu" method="_on_texture_button_down"]
 [connection signal="button_up" from="Button_Menu" to="Button_Menu" method="_on_texture_button_up"]
+[connection signal="pressed" from="Button_Menu" to="." method="_on_button_menu_pressed"]
 [connection signal="pressed" from="Button_Menu" to="Button_Menu" method="_on_pressed"]
 [connection signal="button_down" from="Button_Map" to="Button_Map" method="_on_texture_button_down"]
 [connection signal="button_up" from="Button_Map" to="Button_Map" method="_on_texture_button_up"]
+[connection signal="pressed" from="Button_Map" to="." method="_on_button_map_pressed"]
 [connection signal="pressed" from="Button_Map" to="Button_Map" method="_on_pressed"]
 [connection signal="button_down" from="Button_Book" to="Button_Book" method="_on_texture_button_down"]
 [connection signal="button_up" from="Button_Book" to="Button_Book" method="_on_texture_button_up"]
+[connection signal="pressed" from="Button_Book" to="." method="_on_button_book_pressed"]
 [connection signal="pressed" from="Button_Book" to="Button_Book" method="_on_pressed"]

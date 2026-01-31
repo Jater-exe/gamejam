@@ -21,8 +21,3 @@ func _on_texture_button_up() -> void:
 	
 	tween = create_tween()	
 	tween.tween_property(self, "scale", Vector2.ONE, anim_duration).set_ease(Tween.EASE_OUT)
-
-
-
-func _on_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/main.tscn")

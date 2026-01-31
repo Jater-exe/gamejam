@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://bustrnc7a6evp"]
+
+[ext_resource type="Script" uid="uid://vpcum6mduvsy" path="res://rules.gd" id="1_o41bs"]
+[ext_resource type="Script" uid="uid://bqvtwhmsv1pce" path="res://Scripts/buttons.gd" id="1_twi68"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o41bs"]
+bg_color = Color(0.6, 0.10980392, 0.15294118, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uoipu"]
+bg_color = Color(0.27058825, 0.023529412, 0.05490196, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ndyx5"]
+bg_color = Color(0.27058825, 0.023529412, 0.05490196, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="rules" type="Node" unique_id=1053099348]
+script = ExtResource("1_o41bs")
+
+[node name="Label" type="Label" parent="." unique_id=1897900962]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -155.5
+offset_top = 81.0
+offset_right = 155.5
+offset_bottom = 153.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 80
+text = "Rules:"
+
+[node name="Button_Return" type="Button" parent="." unique_id=321975107]
+custom_minimum_size = Vector2(140, 60)
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -218.0
+offset_top = 938.0
+offset_right = -78.0
+offset_bottom = 1021.0
+grow_horizontal = 0
+size_flags_vertical = 8
+size_flags_stretch_ratio = 0.0
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_o41bs")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_uoipu")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ndyx5")
+text = "Return"
+script = ExtResource("1_twi68")
+
+[connection signal="button_down" from="Button_Return" to="Button_Return" method="_on_texture_button_down"]
+[connection signal="button_up" from="Button_Return" to="Button_Return" method="_on_texture_button_up"]
+[connection signal="pressed" from="Button_Return" to="." method="_on_button_return_pressed"]
+[connection signal="pressed" from="Button_Return" to="Button_Return" method="_on_pressed"]
