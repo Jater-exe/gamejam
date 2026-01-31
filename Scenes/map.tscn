@@ -20,22 +20,81 @@ texture = ExtResource("2_q0mm3")
 [node name="Control" type="Control" parent="." unique_id=375160692]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 166.0
+offset_top = 88.0
+offset_right = 206.0
+offset_bottom = 128.0
+scale = Vector2(0.8176067, 0.82790864)
 
 [node name="TextureRect" type="TextureRect" parent="Control" unique_id=1997761889]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 194.0
-offset_top = 27.0
-offset_right = 1690.0
-offset_bottom = 1011.0
+offset_left = 162.0
+offset_top = 35.0
+offset_right = 1722.0
+offset_bottom = 1075.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_p3ir5")
 metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="Control" unique_id=1828717271]
+layout_mode = 0
+offset_left = 386.4939
+offset_top = 358.73523
+offset_right = 667.4939
+offset_bottom = 522.7352
+text = "NEW VILANOVA"
+
+[node name="Label2" type="Label" parent="Control" unique_id=2036814055]
+layout_mode = 0
+offset_left = 1032.2813
+offset_top = 352.69592
+offset_right = 1442.2813
+offset_bottom = 519.6959
+text = "TORROGONA"
+
+[node name="Label3" type="Label" parent="Control" unique_id=1035575760]
+layout_mode = 0
+offset_left = 1460.36
+offset_top = 410.67334
+offset_right = 1878.36
+offset_bottom = 665.67334
+text = "PERSIONA"
+
+[node name="Label4" type="Label" parent="Control" unique_id=1178152335]
+layout_mode = 0
+offset_left = 1056.7428
+offset_top = 876.9083
+offset_right = 1308.7429
+offset_bottom = 960.9083
+text = "REINONA"
+
+[node name="Label6" type="Label" parent="Control" unique_id=1065445968]
+layout_mode = 0
+offset_left = 628.6642
+offset_top = 216.20743
+offset_right = 778.6642
+offset_bottom = 350.20743
+text = "NUGGET TOWN"
+
+[node name="Label5" type="Label" parent="Control" unique_id=2046920823]
+layout_mode = 0
+offset_left = 841.48035
+offset_top = 659.49304
+offset_right = 1103.4802
+offset_bottom = 771.49304
+text = "BARSALUNA"
+
+[node name="Label7" type="Label" parent="Control" unique_id=1164183203]
+layout_mode = 0
+offset_left = 750.97235
+offset_top = 463.8193
+offset_right = 903.97235
+offset_bottom = 553.81934
+text = "TINGRIS"
 
 [node name="Button_Return" type="MarginContainer" parent="." unique_id=53355034]
 offset_left = 1579.0
@@ -55,55 +114,6 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 40
 text = "Return"
 horizontal_alignment = 1
-
-[node name="Label" type="Label" parent="." unique_id=1828717271]
-offset_left = 160.0
-offset_top = 284.0
-offset_right = 441.0
-offset_bottom = 448.0
-text = "NEW VILANOVA"
-
-[node name="Label2" type="Label" parent="." unique_id=2036814055]
-offset_left = 817.0
-offset_top = 287.0
-offset_right = 1227.0
-offset_bottom = 454.0
-text = "TORROGONA"
-
-[node name="Label3" type="Label" parent="." unique_id=1035575760]
-offset_left = 1243.0
-offset_top = 348.0
-offset_right = 1661.0
-offset_bottom = 603.0
-text = "PERSIONA"
-
-[node name="Label4" type="Label" parent="." unique_id=1178152335]
-offset_left = 826.0
-offset_top = 801.0
-offset_right = 1078.0
-offset_bottom = 885.0
-text = "REINONA"
-
-[node name="Label6" type="Label" parent="." unique_id=1065445968]
-offset_left = 417.0
-offset_top = 157.0
-offset_right = 567.0
-offset_bottom = 291.0
-text = "NUGGET TOWN"
-
-[node name="Label5" type="Label" parent="." unique_id=2046920823]
-offset_left = 624.0
-offset_top = 605.0
-offset_right = 886.0
-offset_bottom = 717.0
-text = "BARSALUNA"
-
-[node name="Label7" type="Label" parent="." unique_id=1164183203]
-offset_left = 530.0
-offset_top = 395.0
-offset_right = 683.0
-offset_bottom = 485.0
-text = "TINGRIS"
 
 [connection signal="button_down" from="Button_Return/TextureButton_Return" to="Button_Return" method="_on_texture_button_return_button_down"]
 [connection signal="button_up" from="Button_Return/TextureButton_Return" to="Button_Return" method="_on_texture_button_return_button_up"]
