@@ -4,6 +4,7 @@ var times = 0
 @onready var bell_sound = $CanvasLayer/Button_Bell/audiocampana
 var state:int = 0
 var old_state:int = 0
+var points:int = 0
 
 var scene = preload("res://Scenes/map.tscn")
 var scene2
@@ -13,6 +14,13 @@ var instancemap
 var instance
 var instancebook
 var instancepaused
+
+@onready var places_mask
+
+const PLACES_MASKS_PATH = "res://Assets/Text/places_masks.json"
+const ADD_POINTS: int = 1
+const DEL_PONTS: int = 1
+
 func _on_texture_button_menu_pressed() -> void:
 	scene4 = preload("res://Scenes/paused.tscn")
 	if has_node("paused") :
@@ -21,10 +29,6 @@ func _on_texture_button_menu_pressed() -> void:
 	instancepaused.name = "paused"
 	add_child(instancepaused)
 	get_tree().paused = true
-
-@onready var places_mask
-
-const PLACES_MASKS_PATH = "res://Assets/Text/places_masks.json"
 
 
 func load_json(path: String) -> Variant:
@@ -47,9 +51,9 @@ func load_json(path: String) -> Variant:
 
 func is_bad(person: Dictionary) -> bool:
 	if person["Mask"] not in places_mask[person["Birthplace"]]:
-		return false
-	else:
 		return true
+	else:
+		return false
 
 func _on_texture_button_map_pressed() -> void:
 	if state == 2 or state == 0:
@@ -76,11 +80,21 @@ func _on_texture_button_book_pressed() -> void:
 
 func _on_texture_button_accept_pressed() -> void:
 	if state == 2:
+		if is_bad(instance.person):
+			points -= DEL_PONTS
+		else:
+			points += ADD_POINTS
+		$Points_Label.text = str(points)
 		instance.queue_free()
 		state = 0
 
 func _on_texture_button_deny_pressed() -> void:
 	if state == 2:
+		if is_bad((instance.person)):
+			points += ADD_POINTS
+		else:
+			points -= DEL_PONTS
+		$Points_Label.text = str(points)
 		instance.queue_free()
 		state = 0
 
@@ -115,3 +129,7 @@ func _on_animated_door_ready() -> void:
 func _on_child_exiting_tree(node: Node) -> void:
 	if node.name == "big_map" or node.name == "book":
 		state = old_state
+		
+func _on_game_ready() -> void:
+	places_mask = load_json(PLACES_MASKS_PATH)
+	$Points_Label.text = str(points)

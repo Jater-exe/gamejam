@@ -190,6 +190,14 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_v158k")
 
+[node name="Points_Label" type="Label" parent="." unique_id=144995832]
+offset_left = 35.0
+offset_top = 12.0
+offset_right = 75.0
+offset_bottom = 31.0
+theme_override_font_sizes/font_size = 100
+text = "0"
+
 [node name="AnimatedDoor" type="AnimatedSprite2D" parent="." unique_id=291715108]
 position = Vector2(944, 270)
 scale = Vector2(15.121875, 14.968889)
@@ -327,6 +335,7 @@ grow_vertical = 0
 texture = ExtResource("14_1phco")
 
 [connection signal="child_exiting_tree" from="." to="." method="_on_child_exiting_tree"]
+[connection signal="ready" from="." to="." method="_on_game_ready"]
 [connection signal="animation_finished" from="AnimatedDoor" to="." method="_on_animated_door_animation_finished"]
 [connection signal="ready" from="AnimatedDoor" to="." method="_on_animated_door_ready"]
 [connection signal="button_down" from="CanvasLayer/Button_Menu/TextureButton_Menu" to="CanvasLayer/Button_Menu" method="_on_texture_button_down"]
