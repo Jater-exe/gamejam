@@ -60,6 +60,13 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="InputEventKey" id="InputEventKey_ewbju"]
+device = -1
+keycode = 4194305
+
+[sub_resource type="Shortcut" id="Shortcut_85qyi"]
+events = [SubResource("InputEventKey_ewbju")]
+
 [sub_resource type="InputEventKey" id="InputEventKey_nb51f"]
 device = -1
 keycode = 66
@@ -203,6 +210,7 @@ script = ExtResource("1_ebmjs")
 z_index = 3
 custom_minimum_size = Vector2(140, 100)
 layout_mode = 2
+shortcut = SubResource("Shortcut_85qyi")
 texture_normal = ExtResource("3_wowpa")
 stretch_mode = 0
 
