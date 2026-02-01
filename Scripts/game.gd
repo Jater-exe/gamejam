@@ -3,31 +3,41 @@ extends Node
 var times = 0
 @onready var bell_sound = $CanvasLayer/Button_Bell/audiocampana
 var state:int = 0
+var old_state:int = 0
 
 var scene = preload("res://Scenes/map.tscn")
 var scene2
+var scene3
 var instancemap
 var instance
+var instancebook
 func _on_texture_button_menu_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/main.tscn")
 
 func _on_texture_button_map_pressed() -> void:
-	if has_node("mapita") :
-		return
-	instancemap = scene.instantiate()
-	instancemap.name = "mapita"
-	add_child(instancemap)
+	if state == 2 or state == 0:
+		if has_node("big_map") :
+			return
+		instancemap = scene.instantiate()
+		instancemap.name = "big_map"
+		add_child(instancemap)
+		old_state = state
+		state = 3
 	
 
 func _on_texture_button_book_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/rules.tscn")
+	if state == 2 or state == 0:
+		scene3 = preload("res://Scenes/rules.tscn")
+		if has_node("book") :
+			return
+		instancebook = scene3.instantiate()
+		instancebook.name = "book"
+		add_child(instancebook)
+		old_state = state
+		state = 3
 
 func _input(event: InputEvent) -> void:
-	if event.is_action("book"):
-		get_tree().change_scene_to_file("res://Scenes/rules.tscn")
-	elif event.is_action("map"):
-		_on_texture_button_map_pressed()
-	elif Input.is_action_just_pressed("esc"):
+	if Input.is_action_just_pressed("esc"):
 		get_tree().change_scene_to_file("res://Scenes/main.tscn")
 
 func _on_texture_button_accept_pressed() -> void:
@@ -66,3 +76,8 @@ func _on_animated_door_animation_finished() -> void:
 
 func _on_animated_door_ready() -> void:
 	$AnimatedDoor.visible = false
+
+
+func _on_child_exiting_tree(node: Node) -> void:
+	if node.name == "big_map" or node.name == "book":
+		state = old_state
