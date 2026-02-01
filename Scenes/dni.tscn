@@ -6,6 +6,7 @@
 [node name="Id" type="TextureRect" unique_id=1421850891]
 offset_right = 1946.0
 offset_bottom = 1071.0
+scale = Vector2(0.3, 0.3)
 texture = ExtResource("1_lfdft")
 script = ExtResource("1_euw0s")
 

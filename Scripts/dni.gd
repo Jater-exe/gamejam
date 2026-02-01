@@ -27,7 +27,6 @@ func load_json(path: String) -> Variant:
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	DisplayServer.window_set_size(Vector2i(100, 100))
 	var data = load_json(NAMES_JSON)
 	if data is Array and data.size() > 0:
 		var random_element = data.pick_random()
