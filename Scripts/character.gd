@@ -37,10 +37,10 @@ func _process(delta: float) -> void:
 			instance_dni.position = Vector2(0,0)
 			created_dni = true
 
-	if time >= 0.25 and _animated_sprite.scale.x < 1:
-		_animated_sprite.scale.x += 0.1
-		_animated_sprite.scale.y += 0.1
-		_animated_sprite.position.y += 100
+	if time >= 0.1 and _animated_sprite.scale.x < 1:
+		_animated_sprite.scale.x += 0.05
+		_animated_sprite.scale.y += 0.05
+		_animated_sprite.position.y += 50
 		time = delta
 	elif _animated_sprite.scale.x < 1:
 		time += delta

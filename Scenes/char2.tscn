@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dlqdmjgopevru"]
 
-[ext_resource type="Texture2D" uid="uid://dftrm8ku866oa" path="res://Assets/Textures/character_walk.png" id="1_d1i0o"]
+[ext_resource type="Texture2D" uid="uid://cpoa05dnl4rou" path="res://Assets/Textures/character_walk.png" id="1_d1i0o"]
 [ext_resource type="Script" uid="uid://mtqvltjifbrp" path="res://Scripts/character.gd" id="2_ggmni"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lucfs"]
@@ -32,13 +32,14 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
-"speed": 5.0
+"speed": 10.0
 }]
 
 [node name="Char2" type="AnimatedSprite2D" unique_id=806479825]
 position = Vector2(152, 232)
 scale = Vector2(0.3, 0.3)
 sprite_frames = SubResource("SpriteFrames_xmuwv")
+frame_progress = 0.6397236
 script = ExtResource("2_ggmni")
 
 [connection signal="ready" from="." to="." method="_ready"]

@@ -4,8 +4,9 @@ extends Control
 @onready var typing_sound = $typingsound
 
 var full_text := "You are a customs agent. 
-Your task is to grant or deny entry.
-Follow the guidelines."
+Your task is to grant or deny entry to the travelers.
+Follow the guidelines written in the book.
+Press the bell to start."
 var char_index := 0
 var speed := 0.05  # segundos entre letras
 
