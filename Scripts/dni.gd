@@ -27,6 +27,7 @@ func load_json(path: String) -> Variant:
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	DisplayServer.window_set_size(Vector2i(100, 100))
 	var data = load_json(NAMES_JSON)
 	if data is Array and data.size() > 0:
 		var random_element = data.pick_random()
@@ -35,7 +36,7 @@ func _ready() -> void:
 	data = load_json(SURENAME_JSON)
 	if data is Array and data.size() > 0:
 		var random_element = data.pick_random()
-		$Surename.text = random_element
+		$Surname.text = random_element
 	
 	data = load_json(AGE_JSON)
 	if data is Array and data.size() > 0:
@@ -51,8 +52,6 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
-
-
 
 
 

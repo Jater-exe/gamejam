@@ -1,72 +1,85 @@
-[gd_scene format=3 uid="uid://ca0a1j1y0gsnc"]
+[gd_scene format=3 uid="uid://vvx0v1te5kpq"]
 
 [ext_resource type="Script" uid="uid://cmaca3e54snun" path="res://Scripts/dni.gd" id="1_euw0s"]
 [ext_resource type="Texture2D" uid="uid://b6i2ky4yoem82" path="res://Assets/Textures/pollita.png" id="1_lfdft"]
 
 [node name="Id" type="TextureRect" unique_id=1421850891]
+offset_right = 1946.0
+offset_bottom = 1071.0
 texture = ExtResource("1_lfdft")
 script = ExtResource("1_euw0s")
 
 [node name="Name" type="Label" parent="." unique_id=1664159891]
 custom_minimum_size = Vector2(0, 5)
 layout_mode = 0
-offset_left = 45.0
-offset_top = 9.0
-offset_right = 76.0
-offset_bottom = 14.0
-theme_override_font_sizes/font_size = 5
-text = "abcdefgh"
+offset_left = 842.0
+offset_top = 205.0
+offset_right = 1652.0
+offset_bottom = 284.0
+theme_override_colors/font_color = Color(0.40168747, 0.66015106, 0.52164936, 1)
+theme_override_font_sizes/font_size = 64
 
 [node name="Surname" type="Label" parent="." unique_id=30857692]
 layout_mode = 0
-offset_left = 50.0
-offset_top = 10.0
-offset_right = 51.0
-offset_bottom = 25.0
+offset_left = 831.0
+offset_top = 276.0
+offset_right = 2141.0
+offset_bottom = 852.0
+pivot_offset = Vector2(29, 8)
+theme_override_colors/font_color = Color(0.4, 0.65882355, 0.52156866, 1)
+theme_override_font_sizes/font_size = 64
 
 [node name="Age" type="Label" parent="." unique_id=163698668]
 layout_mode = 0
-offset_left = 45.0
-offset_top = 29.0
-offset_right = 99.0
-offset_bottom = 44.0
+offset_left = 845.0
+offset_top = 450.0
+offset_right = 1815.0
+offset_bottom = 545.0
+theme_override_colors/font_color = Color(0.4, 0.65882355, 0.52156866, 1)
+theme_override_font_sizes/font_size = 64
 
 [node name="Birth" type="Label" parent="." unique_id=845421800]
 layout_mode = 0
-offset_left = 45.0
-offset_top = 48.0
-offset_right = 99.0
-offset_bottom = 54.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 6
+offset_left = 848.0
+offset_top = 701.0
+offset_right = 1542.0
+offset_bottom = 785.0
+theme_override_colors/font_color = Color(0.4, 0.65882355, 0.52156866, 1)
+theme_override_font_sizes/font_size = 64
 
 [node name="Number" type="Label" parent="." unique_id=1833759333]
 layout_mode = 0
-offset_left = 46.0
-offset_top = 5.0
-offset_right = 86.0
-offset_bottom = 20.0
+offset_left = 166.0
+offset_top = 830.0
+offset_right = 1761.0
+offset_bottom = 945.0
+theme_override_colors/font_color = Color(0.4, 0.65882355, 0.52156866, 1)
+theme_override_font_sizes/font_size = 64
 
 [node name="Title_Number" type="Label" parent="." unique_id=809596956]
 layout_mode = 0
-offset_left = 6.0
-offset_top = 46.0
-offset_right = 32.0
-offset_bottom = 51.0
+offset_left = 166.0
+offset_top = 754.0
+offset_right = 973.0
+offset_bottom = 1058.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 5
+theme_override_font_sizes/font_size = 64
 text = "NUMBER"
 
 [node name="Titles" type="Label" parent="." unique_id=620481498]
 layout_mode = 0
-offset_left = 45.0
-offset_top = 5.0
-offset_right = 105.0
-offset_bottom = 42.0
+offset_left = 845.0
+offset_top = 137.0
+offset_right = 1586.0
+offset_bottom = 744.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 5
+theme_override_font_sizes/font_size = 64
 text = "NAME
 
+
+
 AGE
+
+
 
 BIRTHPLACE"
