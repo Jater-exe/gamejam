@@ -5,23 +5,25 @@ var times = 0
 var state:int = 0
 
 var scene = preload("res://Scenes/map.tscn")
+var scene2
+var instancemap
 var instance
 func _on_texture_button_menu_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/main.tscn")
 
 func _on_texture_button_map_pressed() -> void:
 	if has_node("mapita") :
-		instance.queue_free()
+		instancemap.queue_free()
 		return
-	var instance = scene.instantiate()
-	instance.name = "mapita"
-	add_child(instance)
-	instance.z_index=10
+	instancemap = scene.instantiate()
+	instancemap.name = "mapita"
+	add_child(instancemap)
+	
 
 func _on_texture_button_book_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/rules.tscn")
 
-func _input(event: InputEvent) -> void:
+func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action("book"):
 		get_tree().change_scene_to_file("res://Scenes/rules.tscn")
 	elif event.is_action("map"):
@@ -40,8 +42,8 @@ func _on_texture_button_deny_pressed() -> void:
 		state = 0
 
 func person_arrive():
-	scene = preload("res://Scenes/char2.tscn")
-	instance = scene.instantiate()
+	scene2 = preload("res://Scenes/char2.tscn")
+	instance = scene2.instantiate()
 	instance.name = "person"
 	add_child(instance)
 	instance.position = Vector2(950, 300)

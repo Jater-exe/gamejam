@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bqvtwhmsv1pce" path="res://Scripts/buttons.gd" id="1_ebmjs"]
 [ext_resource type="Script" uid="uid://dq1efcsdpdl2i" path="res://Scripts/game.gd" id="1_qxrlw"]
 [ext_resource type="Texture2D" uid="uid://bko6dhfig1a07" path="res://Assets/Textures/bg.png" id="2_v158k"]
-[ext_resource type="Texture2D" uid="uid://bbv4bhcat5ibi" path="res://Assets/Textures/button.png" id="3_wowpa"]
+[ext_resource type="Texture2D" uid="uid://dcpe1pqc4sa1t" path="res://Assets/Textures/button.png" id="3_wowpa"]
 [ext_resource type="Texture2D" uid="uid://c8h62tcnw75e7" path="res://Assets/Textures/book.png" id="5_1l0tm"]
 [ext_resource type="Texture2D" uid="uid://d0y4kjy4h30sq" path="res://Assets/Textures/minimapa.png" id="8_rku1e"]
 [ext_resource type="Texture2D" uid="uid://b2anit7jl35f" path="res://Assets/Textures/sprite_0.png" id="9_ldgsr"]
@@ -187,6 +187,7 @@ text = "Menu"
 horizontal_alignment = 1
 
 [node name="Button_Book" type="MarginContainer" parent="." unique_id=1417299664]
+z_index = 100
 offset_left = 444.0
 offset_top = 747.0
 offset_right = 624.0
