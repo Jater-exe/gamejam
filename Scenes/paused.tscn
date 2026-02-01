@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://chb2anfdg3pgy"]
+
+[ext_resource type="Script" uid="uid://bh4wrss0bvycb" path="res://Scripts/paused.gd" id="1_c3pqo"]
+[ext_resource type="Script" uid="uid://bqvtwhmsv1pce" path="res://Scripts/buttons.gd" id="2_vcs71"]
+[ext_resource type="Texture2D" uid="uid://bbv4bhcat5ibi" path="res://Assets/Textures/button.png" id="3_wpxug"]
+
+[node name="Node" type="Node" unique_id=637602512]
+script = ExtResource("1_c3pqo")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=823871993]
+layer = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer" unique_id=1434099696]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -202.0
+offset_right = 250.0
+offset_bottom = 202.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Continue" type="MarginContainer" parent="CanvasLayer/VBoxContainer" unique_id=57694791]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+script = ExtResource("2_vcs71")
+
+[node name="TextureButton_Continue" type="TextureButton" parent="CanvasLayer/VBoxContainer/Continue" unique_id=191886557]
+layout_mode = 2
+texture_normal = ExtResource("3_wpxug")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer/Continue" unique_id=1343255221]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 60
+text = "Continue"
+
+[node name="Exit" type="MarginContainer" parent="CanvasLayer/VBoxContainer" unique_id=355068341]
+custom_minimum_size = Vector2(200, 200)
+layout_mode = 2
+script = ExtResource("2_vcs71")
+
+[node name="TextureButton_Exit" type="TextureButton" parent="CanvasLayer/VBoxContainer/Exit" unique_id=2119780066]
+layout_mode = 2
+texture_normal = ExtResource("3_wpxug")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer/Exit" unique_id=872989738]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 60
+text = "Exit"
+
+[connection signal="ready" from="." to="." method="_on_ready"]
+[connection signal="button_down" from="CanvasLayer/VBoxContainer/Continue/TextureButton_Continue" to="CanvasLayer/VBoxContainer/Continue" method="_on_texture_button_down"]
+[connection signal="button_up" from="CanvasLayer/VBoxContainer/Continue/TextureButton_Continue" to="CanvasLayer/VBoxContainer/Continue" method="_on_texture_button_up"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Continue/TextureButton_Continue" to="." method="_on_texture_button_continue_pressed"]
+[connection signal="button_down" from="CanvasLayer/VBoxContainer/Exit/TextureButton_Exit" to="CanvasLayer/VBoxContainer/Exit" method="_on_texture_button_down"]
+[connection signal="button_up" from="CanvasLayer/VBoxContainer/Exit/TextureButton_Exit" to="CanvasLayer/VBoxContainer/Exit" method="_on_texture_button_up"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Exit/TextureButton_Exit" to="." method="_on_texture_button_exit_pressed"]

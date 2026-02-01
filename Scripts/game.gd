@@ -8,11 +8,19 @@ var old_state:int = 0
 var scene = preload("res://Scenes/map.tscn")
 var scene2
 var scene3
+var scene4
 var instancemap
 var instance
 var instancebook
+var instancepaused
 func _on_texture_button_menu_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/main.tscn")
+	scene4 = preload("res://Scenes/paused.tscn")
+	if has_node("paused") :
+		return
+	instancepaused = scene4.instantiate()
+	instancepaused.name = "paused"
+	add_child(instancepaused)
+	get_tree().paused = true
 
 func _on_texture_button_map_pressed() -> void:
 	if state == 2 or state == 0:
