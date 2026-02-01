@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bqvtwhmsv1pce" path="res://Scripts/buttons.gd" id="1_ebmjs"]
 [ext_resource type="Script" uid="uid://dq1efcsdpdl2i" path="res://Scripts/game.gd" id="1_qxrlw"]
 [ext_resource type="Texture2D" uid="uid://bko6dhfig1a07" path="res://Assets/Textures/bg.png" id="2_v158k"]
-[ext_resource type="Texture2D" uid="uid://dcpe1pqc4sa1t" path="res://Assets/Textures/button.png" id="3_wowpa"]
+[ext_resource type="Texture2D" uid="uid://bbv4bhcat5ibi" path="res://Assets/Textures/button.png" id="3_wowpa"]
 [ext_resource type="Texture2D" uid="uid://c8h62tcnw75e7" path="res://Assets/Textures/book.png" id="5_1l0tm"]
 [ext_resource type="Texture2D" uid="uid://d0y4kjy4h30sq" path="res://Assets/Textures/minimapa.png" id="8_rku1e"]
 [ext_resource type="Texture2D" uid="uid://b2anit7jl35f" path="res://Assets/Textures/sprite_0.png" id="9_ldgsr"]
@@ -13,7 +13,52 @@
 [ext_resource type="Texture2D" uid="uid://ble20c75c31c7" path="res://Assets/Textures/sprite_3.png" id="12_rfjv2"]
 [ext_resource type="AudioStream" uid="uid://dueboy274f8pg" path="res://Assets/audio/pooja-bell-fast-415391.mp3" id="12_rku1e"]
 [ext_resource type="Texture2D" uid="uid://du82gd3w25kvm" path="res://Assets/Textures/escenas.png" id="13_1phco"]
-[ext_resource type="Texture2D" uid="uid://mnymnowl63is" path="res://Assets/Textures/tanga.png" id="14_1phco"]
+[ext_resource type="Texture2D" uid="uid://cyat73ephcqvf" path="res://Assets/Textures/bg_2.png" id="14_1phco"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iivbl"]
+atlas = ExtResource("13_1phco")
+region = Rect2(42, 0, 42, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7nbq1"]
+atlas = ExtResource("13_1phco")
+region = Rect2(168, 0, 42, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_exi56"]
+atlas = ExtResource("13_1phco")
+region = Rect2(42, 72, 42, 36)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7t8sx"]
+atlas = ExtResource("13_1phco")
+region = Rect2(168, 72, 42, 36)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mg4q0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iivbl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7nbq1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_exi56")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7t8sx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_exi56")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7nbq1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iivbl")
+}],
+"loop": false,
+"name": &"default",
+"speed": 10.0
+}]
 
 [sub_resource type="InputEventKey" id="InputEventKey_rku1e"]
 device = -1
@@ -111,51 +156,6 @@ unicode = 119
 [sub_resource type="Shortcut" id="Shortcut_nb51f"]
 events = [SubResource("InputEventKey_1phco")]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_iivbl"]
-atlas = ExtResource("13_1phco")
-region = Rect2(42, 0, 42, 36)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7nbq1"]
-atlas = ExtResource("13_1phco")
-region = Rect2(168, 0, 42, 36)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_exi56"]
-atlas = ExtResource("13_1phco")
-region = Rect2(42, 72, 42, 36)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7t8sx"]
-atlas = ExtResource("13_1phco")
-region = Rect2(168, 72, 42, 36)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_mg4q0"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_iivbl")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7nbq1")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_exi56")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7t8sx")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_exi56")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7nbq1")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_iivbl")
-}],
-"loop": false,
-"name": &"default",
-"speed": 10.0
-}]
-
 [node name="game" type="Node" unique_id=105694039]
 script = ExtResource("1_qxrlw")
 
@@ -167,61 +167,77 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_v158k")
 
-[node name="Button_Menu" type="MarginContainer" parent="." unique_id=1969119511]
+[node name="AnimatedDoor" type="AnimatedSprite2D" parent="." unique_id=291715108]
+position = Vector2(944, 270)
+scale = Vector2(15.121875, 14.968889)
+sprite_frames = SubResource("SpriteFrames_mg4q0")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=445161190]
+layer = 3
+
+[node name="Button_Menu" type="MarginContainer" parent="CanvasLayer" unique_id=1969119511]
+z_index = 3
 offset_left = 1619.0
 offset_top = 36.0
 offset_right = 1839.0
 offset_bottom = 147.0
 script = ExtResource("1_ebmjs")
 
-[node name="TextureButton_Menu" type="TextureButton" parent="Button_Menu" unique_id=1501791242]
+[node name="TextureButton_Menu" type="TextureButton" parent="CanvasLayer/Button_Menu" unique_id=1501791242]
+z_index = 3
 custom_minimum_size = Vector2(140, 100)
 layout_mode = 2
 texture_normal = ExtResource("3_wowpa")
 stretch_mode = 0
 
-[node name="Label" type="Label" parent="Button_Menu" unique_id=1020417174]
+[node name="Label" type="Label" parent="CanvasLayer/Button_Menu" unique_id=1020417174]
+z_index = 3
 layout_mode = 2
 theme_override_font_sizes/font_size = 40
 text = "Menu"
 horizontal_alignment = 1
 
-[node name="Button_Book" type="MarginContainer" parent="." unique_id=1417299664]
-z_index = 100
+[node name="Button_Book" type="MarginContainer" parent="CanvasLayer" unique_id=1417299664]
+z_index = 3
 offset_left = 444.0
 offset_top = 747.0
 offset_right = 624.0
 offset_bottom = 987.0
 script = ExtResource("1_ebmjs")
 
-[node name="TextureButton_Book" type="TextureButton" parent="Button_Book" unique_id=892263265]
+[node name="TextureButton_Book" type="TextureButton" parent="CanvasLayer/Button_Book" unique_id=892263265]
+z_index = 3
 custom_minimum_size = Vector2(140, 100)
 layout_mode = 2
 texture_normal = ExtResource("5_1l0tm")
 stretch_mode = 0
 
-[node name="Button_Map" type="MarginContainer" parent="." unique_id=2137947835]
+[node name="Button_Map" type="MarginContainer" parent="CanvasLayer" unique_id=2137947835]
+z_index = 3
 offset_left = 70.0
 offset_top = 771.0
 offset_right = 331.0
 offset_bottom = 955.0
 script = ExtResource("1_ebmjs")
 
-[node name="TextureButton_Map" type="TextureButton" parent="Button_Map" unique_id=1123907491]
+[node name="TextureButton_Map" type="TextureButton" parent="CanvasLayer/Button_Map" unique_id=1123907491]
+z_index = 1
 custom_minimum_size = Vector2(140, 100)
 layout_mode = 2
 texture_normal = ExtResource("8_rku1e")
 ignore_texture_size = true
 stretch_mode = 0
 
-[node name="Button_Accept" type="MarginContainer" parent="." unique_id=1367204874]
+[node name="Button_Accept" type="MarginContainer" parent="CanvasLayer" unique_id=1367204874]
+z_index = 5
 offset_left = 1278.0
 offset_top = 750.0
 offset_right = 1458.0
 offset_bottom = 930.0
 script = ExtResource("1_ebmjs")
 
-[node name="TextureButton_Accept" type="TextureButton" parent="Button_Accept" unique_id=162484587]
+[node name="TextureButton_Accept" type="TextureButton" parent="CanvasLayer/Button_Accept" unique_id=162484587]
+z_index = 5
 custom_minimum_size = Vector2(140, 100)
 layout_mode = 2
 shortcut = SubResource("Shortcut_rfjv2")
@@ -229,14 +245,16 @@ texture_normal = ExtResource("9_ldgsr")
 texture_pressed = ExtResource("10_o5yvi")
 stretch_mode = 0
 
-[node name="Button_Deny" type="MarginContainer" parent="." unique_id=1433026260]
+[node name="Button_Deny" type="MarginContainer" parent="CanvasLayer" unique_id=1433026260]
+z_index = 3
 offset_left = 1585.0
 offset_top = 750.0
 offset_right = 1765.0
 offset_bottom = 930.0
 script = ExtResource("1_ebmjs")
 
-[node name="TextureButton_Deny" type="TextureButton" parent="Button_Deny" unique_id=525311759]
+[node name="TextureButton_Deny" type="TextureButton" parent="CanvasLayer/Button_Deny" unique_id=525311759]
+z_index = 3
 custom_minimum_size = Vector2(140, 100)
 layout_mode = 2
 keep_pressed_outside = true
@@ -245,62 +263,62 @@ texture_normal = ExtResource("11_rku1e")
 texture_pressed = ExtResource("12_rfjv2")
 stretch_mode = 0
 
-[node name="Button_Bell" type="MarginContainer" parent="." unique_id=1964184247]
+[node name="Button_Bell" type="MarginContainer" parent="CanvasLayer" unique_id=1964184247]
+z_index = 3
 offset_left = 433.0
 offset_top = 89.0
 offset_right = 613.0
 offset_bottom = 269.0
 script = ExtResource("1_ebmjs")
 
-[node name="AnimatedBell" type="AnimatedSprite2D" parent="Button_Bell" unique_id=1169091551]
+[node name="AnimatedBell" type="AnimatedSprite2D" parent="CanvasLayer/Button_Bell" unique_id=1169091551]
+z_index = 3
 position = Vector2(97, 87)
 scale = Vector2(8, 8)
 sprite_frames = SubResource("SpriteFrames_iivbl")
 
-[node name="Timer" type="Timer" parent="Button_Bell/AnimatedBell" unique_id=1600774960]
+[node name="Timer" type="Timer" parent="CanvasLayer/Button_Bell/AnimatedBell" unique_id=1600774960]
 
-[node name="audiocampana" type="AudioStreamPlayer2D" parent="Button_Bell" unique_id=874584711]
+[node name="audiocampana" type="AudioStreamPlayer2D" parent="CanvasLayer/Button_Bell" unique_id=874584711]
 stream = ExtResource("12_rku1e")
 
-[node name="TextureButton_Bell" type="TextureButton" parent="Button_Bell" unique_id=60642909]
+[node name="TextureButton_Bell" type="TextureButton" parent="CanvasLayer/Button_Bell" unique_id=60642909]
 layout_mode = 2
 shortcut = SubResource("Shortcut_nb51f")
 
-[node name="AnimatedDoor" type="AnimatedSprite2D" parent="." unique_id=291715108]
-position = Vector2(944, 270)
-scale = Vector2(15.121875, 14.968889)
-sprite_frames = SubResource("SpriteFrames_mg4q0")
+[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=1979465960]
+layer = 2
 
-[node name="Tanga" type="TextureRect" parent="." unique_id=1147573903]
-z_index = 5
-anchors_preset = -1
-anchor_right = 0.022000002
-anchor_bottom = 0.037
-offset_left = 656.0
-offset_top = 630.0
-offset_right = 1233.76
-offset_bottom = 1035.04
+[node name="Bar" type="TextureRect" parent="CanvasLayer2" unique_id=1697963395]
+z_index = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -453.0
+grow_horizontal = 2
+grow_vertical = 0
 texture = ExtResource("14_1phco")
 
-[connection signal="button_down" from="Button_Menu/TextureButton_Menu" to="Button_Menu" method="_on_texture_button_down"]
-[connection signal="button_up" from="Button_Menu/TextureButton_Menu" to="Button_Menu" method="_on_texture_button_up"]
-[connection signal="pressed" from="Button_Menu/TextureButton_Menu" to="." method="_on_texture_button_menu_pressed"]
-[connection signal="button_down" from="Button_Book/TextureButton_Book" to="Button_Book" method="_on_texture_button_down"]
-[connection signal="button_up" from="Button_Book/TextureButton_Book" to="Button_Book" method="_on_texture_button_up"]
-[connection signal="pressed" from="Button_Book/TextureButton_Book" to="." method="_on_texture_button_book_pressed"]
-[connection signal="button_down" from="Button_Map/TextureButton_Map" to="Button_Map" method="_on_texture_button_down"]
-[connection signal="button_up" from="Button_Map/TextureButton_Map" to="Button_Map" method="_on_texture_button_up"]
-[connection signal="pressed" from="Button_Map/TextureButton_Map" to="." method="_on_texture_button_map_pressed"]
-[connection signal="button_down" from="Button_Accept/TextureButton_Accept" to="Button_Accept" method="_on_texture_button_down"]
-[connection signal="button_up" from="Button_Accept/TextureButton_Accept" to="Button_Accept" method="_on_texture_button_up"]
-[connection signal="pressed" from="Button_Accept/TextureButton_Accept" to="." method="_on_texture_button_accept_pressed"]
-[connection signal="button_down" from="Button_Deny/TextureButton_Deny" to="Button_Deny" method="_on_texture_button_down"]
-[connection signal="button_up" from="Button_Deny/TextureButton_Deny" to="Button_Deny" method="_on_texture_button_up"]
-[connection signal="pressed" from="Button_Deny/TextureButton_Deny" to="." method="_on_texture_button_deny_pressed"]
-[connection signal="animation_looped" from="Button_Bell/AnimatedBell" to="." method="_on_animated_sprite_2d_animation_looped"]
-[connection signal="ready" from="Button_Bell/AnimatedBell" to="." method="_on_animated_sprite_2d_ready"]
-[connection signal="button_down" from="Button_Bell/TextureButton_Bell" to="Button_Bell" method="_on_texture_button_down"]
-[connection signal="button_up" from="Button_Bell/TextureButton_Bell" to="Button_Bell" method="_on_texture_button_up"]
-[connection signal="pressed" from="Button_Bell/TextureButton_Bell" to="." method="_on_texture_button_bell_pressed"]
 [connection signal="animation_finished" from="AnimatedDoor" to="." method="_on_animated_door_animation_finished"]
 [connection signal="ready" from="AnimatedDoor" to="." method="_on_animated_door_ready"]
+[connection signal="button_down" from="CanvasLayer/Button_Menu/TextureButton_Menu" to="CanvasLayer/Button_Menu" method="_on_texture_button_down"]
+[connection signal="button_up" from="CanvasLayer/Button_Menu/TextureButton_Menu" to="CanvasLayer/Button_Menu" method="_on_texture_button_up"]
+[connection signal="pressed" from="CanvasLayer/Button_Menu/TextureButton_Menu" to="." method="_on_texture_button_menu_pressed"]
+[connection signal="button_down" from="CanvasLayer/Button_Book/TextureButton_Book" to="CanvasLayer/Button_Book" method="_on_texture_button_down"]
+[connection signal="button_up" from="CanvasLayer/Button_Book/TextureButton_Book" to="CanvasLayer/Button_Book" method="_on_texture_button_up"]
+[connection signal="pressed" from="CanvasLayer/Button_Book/TextureButton_Book" to="." method="_on_texture_button_book_pressed"]
+[connection signal="button_down" from="CanvasLayer/Button_Map/TextureButton_Map" to="CanvasLayer/Button_Map" method="_on_texture_button_down"]
+[connection signal="button_up" from="CanvasLayer/Button_Map/TextureButton_Map" to="CanvasLayer/Button_Map" method="_on_texture_button_up"]
+[connection signal="pressed" from="CanvasLayer/Button_Map/TextureButton_Map" to="." method="_on_texture_button_map_pressed"]
+[connection signal="button_down" from="CanvasLayer/Button_Accept/TextureButton_Accept" to="CanvasLayer/Button_Accept" method="_on_texture_button_down"]
+[connection signal="button_up" from="CanvasLayer/Button_Accept/TextureButton_Accept" to="CanvasLayer/Button_Accept" method="_on_texture_button_up"]
+[connection signal="pressed" from="CanvasLayer/Button_Accept/TextureButton_Accept" to="." method="_on_texture_button_accept_pressed"]
+[connection signal="button_down" from="CanvasLayer/Button_Deny/TextureButton_Deny" to="CanvasLayer/Button_Deny" method="_on_texture_button_down"]
+[connection signal="button_up" from="CanvasLayer/Button_Deny/TextureButton_Deny" to="CanvasLayer/Button_Deny" method="_on_texture_button_up"]
+[connection signal="pressed" from="CanvasLayer/Button_Deny/TextureButton_Deny" to="." method="_on_texture_button_deny_pressed"]
+[connection signal="animation_looped" from="CanvasLayer/Button_Bell/AnimatedBell" to="." method="_on_animated_sprite_2d_animation_looped"]
+[connection signal="ready" from="CanvasLayer/Button_Bell/AnimatedBell" to="." method="_on_animated_sprite_2d_ready"]
+[connection signal="button_down" from="CanvasLayer/Button_Bell/TextureButton_Bell" to="CanvasLayer/Button_Bell" method="_on_texture_button_down"]
+[connection signal="button_up" from="CanvasLayer/Button_Bell/TextureButton_Bell" to="CanvasLayer/Button_Bell" method="_on_texture_button_up"]
+[connection signal="pressed" from="CanvasLayer/Button_Bell/TextureButton_Bell" to="." method="_on_texture_button_bell_pressed"]

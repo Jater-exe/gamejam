@@ -1,7 +1,7 @@
 extends Node
 
 var times = 0
-@onready var bell_sound = $Button_Bell/audiocampana
+@onready var bell_sound = $CanvasLayer/Button_Bell/audiocampana
 var state:int = 0
 
 var scene = preload("res://Scenes/map.tscn")
@@ -53,10 +53,10 @@ func _on_texture_button_bell_pressed() -> void:
 	if times == 0 and state == 0:
 		bell_sound.play()
 		state = 1
-		$Button_Bell/AnimatedBell.play()
+		$CanvasLayer/Button_Bell/AnimatedBell.play()
 		await get_tree().create_timer(1).timeout
 		bell_sound.stop()
-		$Button_Bell/AnimatedBell.stop()
+		$CanvasLayer/Button_Bell/AnimatedBell.stop()
 		$AnimatedDoor.play()
 		$AnimatedDoor.visible = true;
 
