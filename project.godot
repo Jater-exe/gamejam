@@ -17,7 +17,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 config/name="Come In"
 run/main_scene="uid://cgspdebfb1hw6"
 config/features=PackedStringArray("4.6", "Forward Plus")
-boot_splash/bg_color=Color(0.0035191663, 0.003519169, 0.0035191642, 1)
+boot_splash/bg_color=Color(0, 0, 0, 1)
 boot_splash/image="uid://bko6dhfig1a07"
 config/icon="uid://cri6ltuc2uvqc"
 
@@ -26,7 +26,7 @@ config/icon="uid://cri6ltuc2uvqc"
 window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/size/mode=3
-mouse_cursor/custom_image="uid://btu46unw1slly"
+mouse_cursor/custom_image="uid://csh5lokibeqj8"
 <<<<<<<Updatedupstreamwindow/size/mode=3
 
 [gui]
@@ -71,5 +71,5 @@ d={
 textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
-environment/defaults/default_clear_color=Color(0.01702068, 0.017020682, 0.01702067, 1)
+environment/defaults/default_clear_color=Color(0.21960784, 0.41568628, 0.43137255, 1)
 environment/bg_color=Color(0.14, 0.14, 0.14, 1)

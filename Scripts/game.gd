@@ -50,7 +50,7 @@ func load_json(path: String) -> Variant:
 	return json.data
 
 func is_bad(person: Dictionary) -> bool:
-	if person["Mask"] not in places_mask[person["Birthplace"]]:
+	if person["Mask"] not in places_mask[person["Birthplace"]] or person["Birthplace"] == "New Vilanova":
 		return true
 	else:
 		return false
@@ -104,6 +104,8 @@ func person_arrive():
 	instance.name = "person"
 	add_child(instance)
 	instance.position = Vector2(950, 300)
+	#Wait until character's ID is fully created
+	await get_tree().create_timer(2).timeout
 	state = 2
 
 func _on_texture_button_bell_pressed() -> void:
