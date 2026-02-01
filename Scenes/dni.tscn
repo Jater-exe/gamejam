@@ -1,16 +1,25 @@
-[gd_scene format=3 uid="uid://vvx0v1te5kpq"]
+[gd_scene format=3 uid="uid://dpoaha42uayjs"]
 
-[ext_resource type="Script" uid="uid://cmaca3e54snun" path="res://Scripts/dni.gd" id="1_euw0s"]
-[ext_resource type="Texture2D" uid="uid://b6i2ky4yoem82" path="res://Assets/Textures/pollita.png" id="1_lfdft"]
+[ext_resource type="Texture2D" uid="uid://b6i2ky4yoem82" path="res://Assets/Textures/pollita.png" id="1_4tegt"]
+[ext_resource type="Script" uid="uid://cmaca3e54snun" path="res://Scripts/dni.gd" id="2_na8ia"]
 
-[node name="Id" type="TextureRect" unique_id=1421850891]
+[node name="Control" type="Control" unique_id=1859546279]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=24437951]
+layer = 3
+
+[node name="Id" type="TextureRect" parent="CanvasLayer" unique_id=1421850891]
 offset_right = 1946.0
 offset_bottom = 1071.0
 scale = Vector2(0.3, 0.3)
-texture = ExtResource("1_lfdft")
-script = ExtResource("1_euw0s")
+texture = ExtResource("1_4tegt")
+script = ExtResource("2_na8ia")
 
-[node name="Name" type="Label" parent="." unique_id=1664159891]
+[node name="Name" type="Label" parent="CanvasLayer/Id" unique_id=1664159891]
 custom_minimum_size = Vector2(0, 5)
 layout_mode = 0
 offset_left = 842.0
@@ -20,7 +29,7 @@ offset_bottom = 284.0
 theme_override_colors/font_color = Color(0.40168747, 0.66015106, 0.52164936, 1)
 theme_override_font_sizes/font_size = 64
 
-[node name="Surname" type="Label" parent="." unique_id=30857692]
+[node name="Surname" type="Label" parent="CanvasLayer/Id" unique_id=30857692]
 layout_mode = 0
 offset_left = 831.0
 offset_top = 276.0
@@ -30,7 +39,7 @@ pivot_offset = Vector2(29, 8)
 theme_override_colors/font_color = Color(0.4, 0.65882355, 0.52156866, 1)
 theme_override_font_sizes/font_size = 64
 
-[node name="Age" type="Label" parent="." unique_id=163698668]
+[node name="Age" type="Label" parent="CanvasLayer/Id" unique_id=163698668]
 layout_mode = 0
 offset_left = 845.0
 offset_top = 450.0
@@ -39,7 +48,7 @@ offset_bottom = 545.0
 theme_override_colors/font_color = Color(0.4, 0.65882355, 0.52156866, 1)
 theme_override_font_sizes/font_size = 64
 
-[node name="Birth" type="Label" parent="." unique_id=845421800]
+[node name="Birth" type="Label" parent="CanvasLayer/Id" unique_id=845421800]
 layout_mode = 0
 offset_left = 848.0
 offset_top = 701.0
@@ -48,7 +57,7 @@ offset_bottom = 785.0
 theme_override_colors/font_color = Color(0.4, 0.65882355, 0.52156866, 1)
 theme_override_font_sizes/font_size = 64
 
-[node name="Number" type="Label" parent="." unique_id=1833759333]
+[node name="Number" type="Label" parent="CanvasLayer/Id" unique_id=1833759333]
 layout_mode = 0
 offset_left = 166.0
 offset_top = 830.0
@@ -57,7 +66,7 @@ offset_bottom = 945.0
 theme_override_colors/font_color = Color(0.4, 0.65882355, 0.52156866, 1)
 theme_override_font_sizes/font_size = 64
 
-[node name="Title_Number" type="Label" parent="." unique_id=809596956]
+[node name="Title_Number" type="Label" parent="CanvasLayer/Id" unique_id=809596956]
 layout_mode = 0
 offset_left = 166.0
 offset_top = 754.0
@@ -67,7 +76,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 64
 text = "NUMBER"
 
-[node name="Titles" type="Label" parent="." unique_id=620481498]
+[node name="Titles" type="Label" parent="CanvasLayer/Id" unique_id=620481498]
 layout_mode = 0
 offset_left = 845.0
 offset_top = 137.0
