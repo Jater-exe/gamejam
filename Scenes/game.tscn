@@ -208,6 +208,7 @@ offset_bottom = 955.0
 script = ExtResource("1_ebmjs")
 
 [node name="TextureButton_Map" type="TextureButton" parent="Button_Map" unique_id=1123907491]
+z_index = 60
 custom_minimum_size = Vector2(140, 100)
 layout_mode = 2
 texture_normal = ExtResource("8_rku1e")
@@ -222,6 +223,7 @@ offset_bottom = 930.0
 script = ExtResource("1_ebmjs")
 
 [node name="TextureButton_Accept" type="TextureButton" parent="Button_Accept" unique_id=162484587]
+z_index = 60
 custom_minimum_size = Vector2(140, 100)
 layout_mode = 2
 shortcut = SubResource("Shortcut_rfjv2")
