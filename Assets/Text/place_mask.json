@@ -1,9 +1,9 @@
 {
-    "New Vilanova": ["mask_oficial1.png", "mask_oficial2.png"],
-    "Torrogona": ["mask_oficial3.png", "mask_oficial4.png"],
-    "Nugget Town": ["mask_oficial5.png"],
-    "Tingris": ["mask_oficial6.png"],
-    "Barsaluna": ["mask_oficial7.png"],
-    "Reinona": ["mask_oficial21.png"],
-    "Persiona": ["mask_oficial23.png"]
+	"New Vilanova": ["mask_oficial1.png", "mask_oficial2.png"],
+	"Torrogona": ["mask_oficial3.png", "mask_oficial4.png"],
+	"Nugget Town": ["mask_oficial5.png"],
+	"Tingris": ["mask_oficial6.png"],
+	"Barsaluna": ["mask_oficial7.png"],
+	"Reinona": ["mask_oficial21.png"],
+	"Persiona": ["mask_oficial23.png"]
 }

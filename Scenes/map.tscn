@@ -3,7 +3,16 @@
 [ext_resource type="Script" uid="uid://73ov2grfafg4" path="res://Scripts/map.gd" id="1_26yhd"]
 [ext_resource type="Script" uid="uid://bqvtwhmsv1pce" path="res://Scripts/buttons.gd" id="1_ci6au"]
 [ext_resource type="Texture2D" uid="uid://cc0pc8wu35xq1" path="res://Assets/Textures/map_texture.png" id="2_p3ir5"]
+[ext_resource type="Texture2D" uid="uid://ro4i8akds4tc" path="res://Assets/Textures/mask_oficial/mask_oficial1.png" id="3_q0mm3"]
 [ext_resource type="Texture2D" uid="uid://bbv4bhcat5ibi" path="res://Assets/Textures/button.png" id="4_myvm1"]
+[ext_resource type="Texture2D" uid="uid://cpreiwory4dp4" path="res://Assets/Textures/mask_oficial/mask_oficial2.png" id="4_np2xp"]
+[ext_resource type="Texture2D" uid="uid://dooud3vx0oj7i" path="res://Assets/Textures/mask_oficial/mask_oficial3.png" id="5_w7jjh"]
+[ext_resource type="Texture2D" uid="uid://b3iqkvkcmqynk" path="res://Assets/Textures/mask_oficial/mask_oficial4.png" id="6_6q3n4"]
+[ext_resource type="Texture2D" uid="uid://wj5kb637153s" path="res://Assets/Textures/mask_oficial/mask_oficial23.png" id="7_4c2oa"]
+[ext_resource type="Texture2D" uid="uid://vjavj7qh5sb6" path="res://Assets/Textures/mask_oficial/mask_oficial21.png" id="8_5qtum"]
+[ext_resource type="Texture2D" uid="uid://b7q4dhpnjqlgx" path="res://Assets/Textures/mask_oficial/mask_oficial7.png" id="9_ie368"]
+[ext_resource type="Texture2D" uid="uid://dxvxy1cm8u1sw" path="res://Assets/Textures/mask_oficial/mask_oficial5.png" id="10_x5dfk"]
+[ext_resource type="Texture2D" uid="uid://dx7qg2wsouefa" path="res://Assets/Textures/mask_oficial/mask_oficial6.png" id="11_fls3e"]
 
 [sub_resource type="InputEventKey" id="InputEventKey_myvm1"]
 device = -1
@@ -28,7 +37,7 @@ offset_right = 206.0
 offset_bottom = 128.0
 scale = Vector2(0.8176067, 0.82790864)
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Control" unique_id=1997761889]
+[node name="Fullmap" type="TextureRect" parent="CanvasLayer/Control" unique_id=1997761889]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -45,57 +54,139 @@ texture = ExtResource("2_p3ir5")
 layout_mode = 0
 offset_left = 386.4939
 offset_top = 358.73523
-offset_right = 667.4939
-offset_bottom = 522.7352
+offset_right = 563.84076
+offset_bottom = 375.6453
 text = "NEW VILANOVA"
+
+[node name="Mask1" type="TextureRect" parent="CanvasLayer/Control/Label" unique_id=68457962]
+layout_mode = 0
+offset_left = -406.06323
+offset_top = 83.34253
+offset_right = 617.93677
+offset_bottom = 1619.3425
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("3_q0mm3")
+stretch_mode = 3
+
+[node name="Mask2" type="TextureRect" parent="CanvasLayer/Control/Label" unique_id=1085564151]
+layout_mode = 0
+offset_left = -182.23924
+offset_top = 99.04475
+offset_right = 841.76074
+offset_bottom = 1635.0448
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("4_np2xp")
 
 [node name="Label2" type="Label" parent="CanvasLayer/Control" unique_id=2036814055]
 layout_mode = 0
 offset_left = 1032.2813
 offset_top = 352.69592
-offset_right = 1442.2813
-offset_bottom = 519.6959
+offset_right = 1169.2664
+offset_bottom = 373.22958
 text = "TORROGONA"
+
+[node name="Mak3" type="TextureRect" parent="CanvasLayer/Control/Label2" unique_id=390395410]
+layout_mode = 0
+offset_left = -136.98523
+offset_top = -149.77498
+offset_right = 887.0148
+offset_bottom = 1386.225
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("5_w7jjh")
+
+[node name="Mask4" type="TextureRect" parent="CanvasLayer/Control/Label2" unique_id=1676515035]
+layout_mode = 0
+offset_left = -125.97755
+offset_top = 41.067333
+offset_right = 898.02246
+offset_bottom = 1577.0674
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("6_6q3n4")
 
 [node name="Label3" type="Label" parent="CanvasLayer/Control" unique_id=1035575760]
 layout_mode = 0
 offset_left = 1460.36
 offset_top = 410.67334
-offset_right = 1878.36
-offset_bottom = 665.67334
+offset_right = 1560.36
+offset_bottom = 429.99915
 text = "PERSIONA"
+
+[node name="Mask23" type="TextureRect" parent="CanvasLayer/Control/Label3" unique_id=1368090397]
+layout_mode = 0
+offset_left = -210.3703
+offset_top = -1.2078619
+offset_right = 813.6297
+offset_bottom = 1534.7921
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("7_4c2oa")
 
 [node name="Label4" type="Label" parent="CanvasLayer/Control" unique_id=1178152335]
 layout_mode = 0
 offset_left = 1056.7428
 offset_top = 876.9083
-offset_right = 1308.7429
-offset_bottom = 960.9083
+offset_right = 1145.7428
+offset_bottom = 891.9083
 text = "REINONA"
+
+[node name="Mask21" type="TextureRect" parent="CanvasLayer/Control/Label4" unique_id=52094619]
+layout_mode = 0
+offset_left = -419.5171
+offset_top = -38.651608
+offset_right = 604.4829
+offset_bottom = 1497.3484
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("8_5qtum")
+
+[node name="Label5" type="Label" parent="CanvasLayer/Control" unique_id=2046920823]
+layout_mode = 0
+offset_left = 841.48035
+offset_top = 659.49304
+offset_right = 977.24243
+offset_bottom = 677.61096
+text = "BARSALUNA"
+
+[node name="Mask7" type="TextureRect" parent="CanvasLayer/Control/Label5" unique_id=928544773]
+layout_mode = 0
+offset_left = -388.94
+offset_top = 24.157255
+offset_right = 635.06
+offset_bottom = 1560.1572
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("9_ie368")
 
 [node name="Label6" type="Label" parent="CanvasLayer/Control" unique_id=1065445968]
 layout_mode = 0
 offset_left = 628.6642
 offset_top = 216.20743
 offset_right = 778.6642
-offset_bottom = 350.20743
+offset_bottom = 231.20743
 text = "NUGGET TOWN"
 
-[node name="Label5" type="Label" parent="CanvasLayer/Control" unique_id=2046920823]
+[node name="Mask5" type="TextureRect" parent="CanvasLayer/Control/Label6" unique_id=920840365]
 layout_mode = 0
-offset_left = 841.48035
-offset_top = 659.49304
-offset_right = 1103.4802
-offset_bottom = 771.49304
-text = "BARSALUNA"
+offset_left = -206.70094
+offset_top = 16.910078
+offset_right = 817.2991
+offset_bottom = 1552.91
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("10_x5dfk")
 
 [node name="Label7" type="Label" parent="CanvasLayer/Control" unique_id=1164183203]
 layout_mode = 0
 offset_left = 750.97235
 offset_top = 463.8193
-offset_right = 903.97235
-offset_bottom = 553.81934
+offset_right = 839.03424
+offset_bottom = 480.7294
 text = "TINGRIS"
+
+[node name="Mask6" type="TextureRect" parent="CanvasLayer/Control/Label7" unique_id=1191530798]
+layout_mode = 0
+offset_left = -123.531296
+offset_top = 16.910078
+offset_right = 900.4687
+offset_bottom = 1552.91
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("11_fls3e")
 
 [node name="Button_Return" type="MarginContainer" parent="CanvasLayer" unique_id=53355034]
 offset_left = 1579.0
