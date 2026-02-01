@@ -18,12 +18,14 @@ config/name="Come In"
 run/main_scene="uid://cgspdebfb1hw6"
 config/features=PackedStringArray("4.6", "Forward Plus")
 boot_splash/bg_color=Color(0.0035191663, 0.003519169, 0.0035191642, 1)
-config/icon="res://icon.svg"
+boot_splash/image="uid://bko6dhfig1a07"
+config/icon="uid://cri6ltuc2uvqc"
 
 [display]
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
+window/size/mode=3
 
 [gui]
 
