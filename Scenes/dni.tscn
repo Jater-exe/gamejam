@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://ca0a1j1y0gsnc"]
 
 [ext_resource type="Script" uid="uid://cmaca3e54snun" path="res://Scripts/dni.gd" id="1_euw0s"]
+[ext_resource type="Texture2D" uid="uid://cxmeokbsu6c72" path="res://Assets/Textures/id_texture.png" id="1_lfdft"]
 
 [node name="Id" type="TextureRect" unique_id=1421850891]
+texture = ExtResource("1_lfdft")
 script = ExtResource("1_euw0s")
 
 [node name="Name" type="Label" parent="." unique_id=1664159891]
