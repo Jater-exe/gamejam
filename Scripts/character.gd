@@ -29,12 +29,12 @@ func _process(delta: float) -> void:
 			instance_dni.name = "dni"
 			add_child(instance_dni)
 			person["Birthplace"] = $dni/CanvasLayer/Id/Birth.text
-			print(person["Birthplace"])
 			person["Number"] = $dni/CanvasLayer/Id/Number.text
 			person["Age"] = $dni/CanvasLayer/Id/Age.text
 			person["Name"] = $dni/CanvasLayer/Id/Name.text
 			person["Surname"] = $dni/CanvasLayer/Id/Surname.text
-			instance_dni.position = Vector2(180,50)
+			$dni/CanvasLayer/Id.position = Vector2(658 ,700)
+			instance_dni.position = Vector2(0,0)
 			created_dni = true
 
 	if time >= 0.25 and _animated_sprite.scale.x < 1:
