@@ -17,7 +17,7 @@ var instancepaused
 
 @onready var places_mask
 
-const PLACES_MASKS_PATH = "res://Assets/Text/places_masks.json"
+const PLACES_MASKS_PATH = "res://Assets/Text/place_mask.json"
 const ADD_POINTS: int = 1
 const DEL_PONTS: int = 1
 

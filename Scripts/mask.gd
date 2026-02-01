@@ -1,7 +1,7 @@
 extends Node
 
 const MASKS_JSON = "res://Assets/Text/masks.json"
-
+var mask_name
 
 func load_json(path: String) -> Variant:
 	var file = FileAccess.open(path, FileAccess.READ)
@@ -21,14 +21,16 @@ func load_json(path: String) -> Variant:
 
 	return json.data
 
+func get_mask() -> String:
+	return mask_name
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	var data = load_json(MASKS_JSON)
 	if data is Array and data.size() > 0:
-		var random_element = data.pick_random()
+		mask_name = data.pick_random()
 		var LOAD_PATH = "res://Assets/Textures/mask_oficial/"
-		LOAD_PATH += random_element
+		LOAD_PATH += mask_name
 		self.texture = load(LOAD_PATH)
 		
 
