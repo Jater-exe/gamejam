@@ -13,7 +13,6 @@ func _on_texture_button_menu_pressed() -> void:
 
 func _on_texture_button_map_pressed() -> void:
 	if has_node("mapita") :
-		instancemap.queue_free()
 		return
 	instancemap = scene.instantiate()
 	instancemap.name = "mapita"
@@ -23,11 +22,11 @@ func _on_texture_button_map_pressed() -> void:
 func _on_texture_button_book_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/rules.tscn")
 
-func _unhandled_input(event: InputEvent) -> void:
+func _input(event: InputEvent) -> void:
 	if event.is_action("book"):
 		get_tree().change_scene_to_file("res://Scenes/rules.tscn")
 	elif event.is_action("map"):
-		get_tree().change_scene_to_file("res://Scenes/map.tscn")
+		_on_texture_button_map_pressed()
 	elif Input.is_action_just_pressed("esc"):
 		get_tree().change_scene_to_file("res://Scenes/main.tscn")
 
